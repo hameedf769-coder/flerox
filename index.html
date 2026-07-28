@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>FLERIX Fashion | Home</title>
+
+<link rel="stylesheet" href="style.css">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial,Helvetica,sans-serif;
+}
+
+body{
+background:#f8f8f8;
+}
+
+header{
+background:#111;
+color:white;
+padding:15px 8%;
+display:flex;
+justify-content:space-between;
+align-items:center;
+}
+
+.logo{
+font-size:28px;
+font-weight:bold;
+color:#ff4d6d;
+}
+
+nav a{
+color:white;
+text-decoration:none;
+margin-left:20px;
+transition:.3s;
+}
+
+nav a:hover{
+color:#ff4d6d;
+}
+
+.icons i{
+margin-left:20px;
+cursor:pointer;
+font-size:18px;
+}
+
+.hero{
+height:90vh;
+background:linear-gradient(rgba(0,0,0,.5),rgba(0,0,0,.5)),
+url("https://images.unsplash.com/photo-1523381210434-271e8be1f52b?auto=format&fit=crop&w=1600&q=80");
+background-size:cover;
+background-position:center;
+display:flex;
+justify-content:center;
+align-items:center;
+text-align:center;
+color:white;
+}
+
+.hero h1{
+font-size:60px;
+margin-bottom:20px;
+}
+
+.hero p{
+font-size:20px;
+margin-bottom:30px;
+}
+
+.btn{
+display:inline-block;
+padding:14px 35px;
+background:#ff4d6d;
+color:white;
+text-decoration:none;
+border-radius:30px;
+transition:.3s;
+}
+
+.btn:hover{
+background:#111;
+}
+
+section{
+padding:70px 8%;
+}
+
+.title{
+text-align:center;
+margin-bottom:50px;
+font-size:35px;
+}
+
+.categories{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:25px;
+}
+
+.category{
+background:white;
+padding:30px;
+text-align:center;
+border-radius:10px;
+box-shadow:0 5px 15px rgba(0,0,0,.1);
+transition:.3s;
+}
+
+.category:hover{
+transform:translateY(-8px);
+}
+
+.category img{
+width:100%;
+height:280px;
+object-fit:cover;
+border-radius:10px;
+}
+
+.category h3{
+margin-top:20px;
+}
+
+.products{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(230px,1fr));
+gap:25px;
+}
+
+.product{
+background:white;
+padding:20px;
+border-radius:10px;
+text-align:center;
+box-shadow:0 5px 15px rgba(0,0,0,.1);
+}
+
+.product img{
+width:100%;
+height:250px;
+object-fit:cover;
+border-radius:10px;
+}
+
+.product h3{
+margin:15px 0;
+}
+
+.price{
+color:#ff4d6d;
+font-size:22px;
+font-weight:bold;
+}
+
+.about{
+display:flex;
+flex-wrap:wrap;
+align-items:center;
+gap:40px;
+}
+
+.about img{
+flex:1;
+width:100%;
+border-radius:10px;
+}
+
+.about-text{
+flex:1;
+}
+
+.contact{
+text-align:center;
+}
+
+footer{
+background:#111;
+color:white;
+padding:25px;
+text-align:center;
+margin-top:40px;
+}
+
+</style>
+
+</head>
+<body>
+
+<header>
+
+<div class="logo">FLERIX</div>
+
+<nav>
+
+<a href="#">Home</a>
+<a href="#">Shop</a>
+<a href="#">Men</a>
+<a href="#">Women</a>
+<a href="#">Kids</a>
+<a href="#">Contact</a>
+
+</nav>
+
+<div class="icons">
+<i class="fa-solid fa-magnifying-glass"></i>
+<i class="fa-regular fa-heart"></i>
+<i class="fa-solid fa-cart-shopping"></i>
+<i class="fa-regular fa-user"></i>
+</div>
+
+</header>
+
+<section class="hero">
+
+<div>
+
+<h1>New Fashion Collection 2026</h1>
+
+<p>Premium Clothing for Men, Women & Kids</p>
+
+<a href="#" class="btn">Shop Now</a>
+
+</div>
+
+</section>
+
+<section>
+
+<h2 class="title">Shop By Category</h2>
+
+<div class="categories">
+
+<div class="category">
+
+<img src="https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?auto=format&fit=crop&w=800&q=80">
+
+<h3>Women's Fashion</h3>
+
+</div>
+
+<div class="category">
+
+<img src="https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=800&q=80">
+
+<h3>Men's Fashion</h3>
+
+</div>
+
+<div class="category">
+
+<img src="https://images.unsplash.com/photo-1519345182560-3f2917c472ef?auto=format&fit=crop&w=800&q=80">
+
+<h3>Kids Collection</h3>
+
+</div>
+
+</div>
+
+</section>
+
+<section>
+
+<h2 class="title">Featured Products</h2>
+
+<div class="products">
+
+<div class="product">
+
+<img src="https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?auto=format&fit=crop&w=800&q=80">
+
+<h3>Casual T-Shirt</h3>
+
+<p class="price">$25</p>
+
+<a href="#" class="btn">Add to Cart</a>
+
+</div>
+
+<div class="product">
+
+<img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&w=800&q=80">
+
+<h3>Running Shoes</h3>
+
+<p class="price">$65</p>
+
+<a href="#" class="btn">Add to Cart</a>
+
+</div>
+
+<div class="product">
+
+<img src="https://images.unsplash.com/photo-1541099649105-f69ad21f3246?auto=format&fit=crop&w=800&q=80">
+
+<h3>Denim Jacket</h3>
+
+<p class="price">$70</p>
+
+<a href="#" class="btn">Add to Cart</a>
+
+</div>
+
+<div class="product">
+
+<img src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&w=800&q=80">
+
+<h3>Summer Dress</h3>
+
+<p class="price">$45</p>
+
+<a href="#" class="btn">Buy Now</a>
+
+</div>
+
+</div>
+
+</section>
+
+<section>
+
+<h2 class="title">About FLERIX</h2>
+
+<div class="about">
+
+<img src="https://images.unsplash.com/photo-1483985988355-763728e1935b?auto=format&fit=crop&w=1000&q=80">
+
+<div class="about-text">
+
+<h2>Fashion That Speaks Your Style</h2>
+
+<br>
+
+<p>
+
+FLERIX Fashion provides premium quality clothing for Men,
+Women and Kids. We deliver stylish outfits with affordable
+prices and fast shipping worldwide.
+
+</p>
+
+<br>
+
+<a href="#" class="btn">Read More</a>
+
+</div>
+
+</div>
+
+</section>
+
+<section class="contact">
+
+<h2 class="title">Contact Us</h2>
+
+<p>Email : info@flerixfashion.com</p>
+
+<p>Phone : +92 300 1234567</p>
+
+<p>Islamabad, Pakistan</p>
+
+<br>
+
+<a href="#" class="btn">Get In Touch</a>
+
+</section>
+
+<footer>
+
+<p>
+
+© 2026 FLERIX Fashion. All Rights Reserved.
+
+</p>
+
+</footer>
+
+</body>
+</html>

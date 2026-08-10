@@ -1,0 +1,1078 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Men's Collection | FLERIX Fashion</title>
+
+    <meta name="description"
+          content="Shop the latest men's clothing at FLERIX. Discover shirts, t-shirts, jeans, jackets, suits and stylish men's fashion.">
+
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        body {
+            background: #f7f7f7;
+            color: #222;
+        }
+
+        /* ================= NAVBAR ================= */
+
+        header {
+            background: #111;
+            color: white;
+            padding: 18px 7%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 999;
+            box-shadow: 0 3px 12px rgba(0,0,0,.2);
+        }
+
+        .logo {
+            font-size: 32px;
+            font-weight: bold;
+            letter-spacing: 4px;
+            color: white;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin-left: 22px;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            color: #d4a574;
+        }
+
+
+        /* ================= HERO ================= */
+
+        .hero {
+            min-height: 550px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 60px 7%;
+            background: #e8e3dd;
+        }
+
+        .hero-text {
+            width: 48%;
+        }
+
+        .hero-text small {
+            color: #8a5a35;
+            font-size: 18px;
+            font-weight: bold;
+            letter-spacing: 1px;
+        }
+
+        .hero-text h1 {
+            font-size: 60px;
+            line-height: 1.05;
+            margin: 20px 0;
+        }
+
+        .hero-text p {
+            color: #555;
+            font-size: 18px;
+            line-height: 1.7;
+            margin-bottom: 28px;
+        }
+
+        .shop-btn {
+            display: inline-block;
+            background: #111;
+            color: white;
+            padding: 15px 32px;
+            border-radius: 4px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .shop-btn:hover {
+            background: #8a5a35;
+        }
+
+        .hero img {
+            width: 44%;
+            height: 470px;
+            object-fit: cover;
+            border-radius: 8px;
+        }
+
+
+        /* ================= SECTION ================= */
+
+        .section {
+            padding: 70px 7%;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .section-title h2 {
+            font-size: 40px;
+            margin-bottom: 10px;
+        }
+
+        .section-title p {
+            color: #777;
+        }
+
+
+        /* ================= FILTERS ================= */
+
+        .filters {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 12px;
+            margin-bottom: 40px;
+        }
+
+        .filter {
+            border: 1px solid #ccc;
+            background: white;
+            padding: 12px 25px;
+            border-radius: 25px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+        .filter:hover,
+        .filter.active {
+            background: #111;
+            color: white;
+        }
+
+
+        /* ================= PRODUCTS ================= */
+
+        .products {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 25px;
+        }
+
+        .product {
+            background: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 18px rgba(0,0,0,.08);
+            transition: .3s;
+        }
+
+        .product:hover {
+            transform: translateY(-8px);
+        }
+
+        .product-image {
+            position: relative;
+        }
+
+        .product-image img {
+            width: 100%;
+            height: 340px;
+            object-fit: cover;
+            display: block;
+        }
+
+        .badge {
+            position: absolute;
+            top: 12px;
+            left: 12px;
+            background: #111;
+            color: white;
+            padding: 7px 12px;
+            border-radius: 4px;
+            font-size: 12px;
+            font-weight: bold;
+        }
+
+        .sale {
+            background: #a23b3b;
+        }
+
+        .product-info {
+            padding: 18px;
+        }
+
+        .product-info h3 {
+            font-size: 18px;
+            margin-bottom: 7px;
+        }
+
+        .product-category {
+            color: #888;
+            font-size: 14px;
+            margin-bottom: 10px;
+        }
+
+        .rating {
+            color: #e6a526;
+            margin-bottom: 10px;
+        }
+
+        .price {
+            font-size: 20px;
+            font-weight: bold;
+            margin-bottom: 15px;
+            color: #8a5a35;
+        }
+
+        .old-price {
+            color: #999;
+            font-size: 14px;
+            text-decoration: line-through;
+            margin-left: 5px;
+        }
+
+        .cart-btn {
+            width: 100%;
+            padding: 12px;
+            background: #111;
+            border: none;
+            color: white;
+            cursor: pointer;
+            border-radius: 5px;
+            font-weight: bold;
+        }
+
+        .cart-btn:hover {
+            background: #8a5a35;
+        }
+
+
+        /* ================= OFFER ================= */
+
+        .offer {
+            margin: 10px 7% 70px;
+            padding: 60px;
+            text-align: center;
+            background: #111;
+            color: white;
+            border-radius: 8px;
+        }
+
+        .offer h2 {
+            font-size: 38px;
+            margin-bottom: 12px;
+        }
+
+        .offer p {
+            color: #ccc;
+            font-size: 18px;
+            margin-bottom: 25px;
+        }
+
+        .offer .shop-btn {
+            background: white;
+            color: #111;
+        }
+
+        .offer .shop-btn:hover {
+            background: #d4a574;
+            color: white;
+        }
+
+
+        /* ================= FOOTER ================= */
+
+        footer {
+            background: #111;
+            color: white;
+            text-align: center;
+            padding: 50px 7%;
+        }
+
+        footer h2 {
+            letter-spacing: 4px;
+            margin-bottom: 15px;
+        }
+
+        footer p {
+            color: #aaa;
+            margin: 8px;
+        }
+
+
+        /* ================= RESPONSIVE ================= */
+
+        @media (max-width: 1100px) {
+
+            .products {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+        }
+
+        @media (max-width: 700px) {
+
+            header {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            nav {
+                text-align: center;
+            }
+
+            nav a {
+                display: inline-block;
+                margin: 5px;
+                font-size: 13px;
+            }
+
+            .hero {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .hero-text {
+                width: 100%;
+                margin-bottom: 35px;
+            }
+
+            .hero-text h1 {
+                font-size: 42px;
+            }
+
+            .hero img {
+                width: 100%;
+                height: 400px;
+            }
+
+            .products {
+                grid-template-columns: 1fr;
+            }
+
+        }
+
+    </style>
+</head>
+
+
+<body>
+
+
+<!-- ================= NAVBAR ================= -->
+
+<header>
+
+    <div class="logo">
+        FLERIX
+    </div>
+
+    <nav>
+
+        <a href="index.html">Home</a>
+
+        <a href="shop.html">Shop</a>
+
+        <a href="men.html">Men</a>
+
+        <a href="women.html">Women</a>
+
+        <a href="kids.html">Kids</a>
+
+        <a href="cart.html">🛒 Cart</a>
+
+    </nav>
+
+</header>
+
+
+
+<!-- ================= HERO ================= -->
+
+<section class="hero">
+
+    <div class="hero-text">
+
+        <small>
+            ✦ FLERIX MEN'S COLLECTION
+        </small>
+
+        <h1>
+            Modern Style.<br>
+            Everyday Confidence.
+        </h1>
+
+        <p>
+            Upgrade your wardrobe with premium shirts,
+            t-shirts, jeans, jackets, suits and modern
+            men's fashion from FLERIX.
+        </p>
+
+        <a href="#collection" class="shop-btn">
+            SHOP MEN
+        </a>
+
+    </div>
+
+
+    <img
+        src="https://images.unsplash.com/photo-1617127365659-c47fa864d8bc?auto=format&fit=crop&w=900&q=80"
+        alt="Men's Fashion">
+
+</section>
+
+
+
+<!-- ================= COLLECTION ================= -->
+
+<section class="section" id="collection">
+
+    <div class="section-title">
+
+        <h2>
+            Men's Collection
+        </h2>
+
+        <p>
+            Discover our latest men's fashion.
+        </p>
+
+    </div>
+
+
+    <!-- FILTER BUTTONS -->
+
+    <div class="filters">
+
+        <button class="filter active"
+                onclick="filterProducts('all', this)">
+            All
+        </button>
+
+        <button class="filter"
+                onclick="filterProducts('tshirt', this)">
+            👕 T-Shirts
+        </button>
+
+        <button class="filter"
+                onclick="filterProducts('shirt', this)">
+            👔 Shirts
+        </button>
+
+        <button class="filter"
+                onclick="filterProducts('jeans', this)">
+            👖 Jeans
+        </button>
+
+        <button class="filter"
+                onclick="filterProducts('jacket', this)">
+            🧥 Jackets
+        </button>
+
+        <button class="filter"
+                onclick="filterProducts('suit', this)">
+            🤵 Suits
+        </button>
+
+    </div>
+
+
+
+    <!-- ================= PRODUCTS ================= -->
+
+    <div class="products">
+
+
+        <!-- PRODUCT 1 -->
+
+        <div class="product tshirt">
+
+            <div class="product-image">
+
+                <span class="badge">
+                    NEW
+                </span>
+
+                <img
+                    src="https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?auto=format&fit=crop&w=700&q=80"
+                    alt="Men White T Shirt">
+
+            </div>
+
+            <div class="product-info">
+
+                <h3>
+                    Premium White T-Shirt
+                </h3>
+
+                <div class="product-category">
+                    Men's T-Shirt
+                </div>
+
+                <div class="rating">
+                    ★★★★★
+                </div>
+
+                <div class="price">
+                    Rs. 1,799
+                </div>
+
+                <button class="cart-btn"
+                        onclick="addToCart('Premium White T-Shirt',1799)">
+                    Add to Cart
+                </button>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- PRODUCT 2 -->
+
+        <div class="product shirt">
+
+            <div class="product-image">
+
+                <span class="badge">
+                    TRENDING
+                </span>
+
+                <img
+                    src="https://images.unsplash.com/photo-1602810318383-e386cc2a3ccf?auto=format&fit=crop&w=700&q=80"
+                    alt="Men Formal Shirt">
+
+            </div>
+
+            <div class="product-info">
+
+                <h3>
+                    Classic Formal Shirt
+                </h3>
+
+                <div class="product-category">
+                    Men's Shirt
+                </div>
+
+                <div class="rating">
+                    ★★★★★
+                </div>
+
+                <div class="price">
+                    Rs. 2,499
+                </div>
+
+                <button class="cart-btn"
+                        onclick="addToCart('Classic Formal Shirt',2499)">
+                    Add to Cart
+                </button>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- PRODUCT 3 -->
+
+        <div class="product jeans">
+
+            <div class="product-image">
+
+                <span class="badge">
+                    BEST SELLER
+                </span>
+
+                <img
+                    src="https://images.unsplash.com/photo-1542272604-787c3835535d?auto=format&fit=crop&w=700&q=80"
+                    alt="Men Blue Jeans">
+
+            </div>
+
+            <div class="product-info">
+
+                <h3>
+                    Classic Blue Jeans
+                </h3>
+
+                <div class="product-category">
+                    Men's Denim
+                </div>
+
+                <div class="rating">
+                    ★★★★★
+                </div>
+
+                <div class="price">
+                    Rs. 3,299
+                </div>
+
+                <button class="cart-btn"
+                        onclick="addToCart('Classic Blue Jeans',3299)">
+                    Add to Cart
+                </button>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- PRODUCT 4 -->
+
+        <div class="product jacket">
+
+            <div class="product-image">
+
+                <span class="badge">
+                    NEW
+                </span>
+
+                <img
+                    src="https://images.unsplash.com/photo-1551028719-00167b16eac5?auto=format&fit=crop&w=700&q=80"
+                    alt="Men Leather Jacket">
+
+            </div>
+
+            <div class="product-info">
+
+                <h3>
+                    Classic Leather Jacket
+                </h3>
+
+                <div class="product-category">
+                    Men's Jacket
+                </div>
+
+                <div class="rating">
+                    ★★★★★
+                </div>
+
+                <div class="price">
+                    Rs. 6,999
+                </div>
+
+                <button class="cart-btn"
+                        onclick="addToCart('Classic Leather Jacket',6999)">
+                    Add to Cart
+                </button>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- PRODUCT 5 -->
+
+        <div class="product suit">
+
+            <div class="product-image">
+
+                <span class="badge">
+                    PREMIUM
+                </span>
+
+                <img
+                    src="https://images.unsplash.com/photo-1598808503746-f34c53b9323e?auto=format&fit=crop&w=700&q=80"
+                    alt="Men Business Suit">
+
+            </div>
+
+            <div class="product-info">
+
+                <h3>
+                    Premium Business Suit
+                </h3>
+
+                <div class="product-category">
+                    Men's Formal Suit
+                </div>
+
+                <div class="rating">
+                    ★★★★★
+                </div>
+
+                <div class="price">
+                    Rs. 9,999
+                </div>
+
+                <button class="cart-btn"
+                        onclick="addToCart('Premium Business Suit',9999)">
+                    Add to Cart
+                </button>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- PRODUCT 6 -->
+
+        <div class="product tshirt">
+
+            <div class="product-image">
+
+                <span class="badge sale">
+                    SALE
+                </span>
+
+                <img
+                    src="https://images.unsplash.com/photo-1503341504253-dff4815485f1?auto=format&fit=crop&w=700&q=80"
+                    alt="Men Casual T Shirt">
+
+            </div>
+
+            <div class="product-info">
+
+                <h3>
+                    Casual Graphic T-Shirt
+                </h3>
+
+                <div class="product-category">
+                    Men's T-Shirt
+                </div>
+
+                <div class="rating">
+                    ★★★★☆
+                </div>
+
+                <div class="price">
+                    Rs. 1,399
+                    <span class="old-price">
+                        Rs. 1,999
+                    </span>
+                </div>
+
+                <button class="cart-btn"
+                        onclick="addToCart('Casual Graphic T-Shirt',1399)">
+                    Add to Cart
+                </button>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- PRODUCT 7 -->
+
+        <div class="product shirt">
+
+            <div class="product-image">
+
+                <span class="badge">
+                    NEW
+                </span>
+
+                <img
+                    src="https://images.unsplash.com/photo-1596755094514-f87e34085b2c?auto=format&fit=crop&w=700&q=80"
+                    alt="Men Casual Shirt">
+
+            </div>
+
+            <div class="product-info">
+
+                <h3>
+                    Casual Cotton Shirt
+                </h3>
+
+                <div class="product-category">
+                    Men's Casual Shirt
+                </div>
+
+                <div class="rating">
+                    ★★★★☆
+                </div>
+
+                <div class="price">
+                    Rs. 2,199
+                </div>
+
+                <button class="cart-btn"
+                        onclick="addToCart('Casual Cotton Shirt',2199)">
+                    Add to Cart
+                </button>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- PRODUCT 8 -->
+
+        <div class="product jeans">
+
+            <div class="product-image">
+
+                <span class="badge sale">
+                    SALE
+                </span>
+
+                <img
+                    src="https://images.unsplash.com/photo-1473966968600-fa801b869a1a?auto=format&fit=crop&w=700&q=80"
+                    alt="Men Black Jeans">
+
+            </div>
+
+            <div class="product-info">
+
+                <h3>
+                    Slim Fit Black Jeans
+                </h3>
+
+                <div class="product-category">
+                    Men's Jeans
+                </div>
+
+                <div class="rating">
+                    ★★★★★
+                </div>
+
+                <div class="price">
+                    Rs. 2,799
+                    <span class="old-price">
+                        Rs. 3,499
+                    </span>
+                </div>
+
+                <button class="cart-btn"
+                        onclick="addToCart('Slim Fit Black Jeans',2799)">
+                    Add to Cart
+                </button>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- PRODUCT 9 -->
+
+        <div class="product jacket">
+
+            <div class="product-image">
+
+                <img
+                    src="https://images.unsplash.com/photo-1548883354-7622d03aca27?auto=format&fit=crop&w=700&q=80"
+                    alt="Men Denim Jacket">
+
+            </div>
+
+            <div class="product-info">
+
+                <h3>
+                    Denim Trucker Jacket
+                </h3>
+
+                <div class="product-category">
+                    Men's Denim Jacket
+                </div>
+
+                <div class="rating">
+                    ★★★★★
+                </div>
+
+                <div class="price">
+                    Rs. 4,299
+                </div>
+
+                <button class="cart-btn"
+                        onclick="addToCart('Denim Trucker Jacket',4299)">
+                    Add to Cart
+                </button>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- PRODUCT 10 -->
+
+        <div class="product suit">
+
+            <div class="product-image">
+
+                <img
+                    src="https://images.unsplash.com/photo-1555069519-127aadedf1ee?auto=format&fit=crop&w=700&q=80"
+                    alt="Men Formal Suit">
+
+            </div>
+
+            <div class="product-info">
+
+                <h3>
+                    Classic Black Suit
+                </h3>
+
+                <div class="product-category">
+                    Men's Formal Wear
+                </div>
+
+                <div class="rating">
+                    ★★★★★
+                </div>
+
+                <div class="price">
+                    Rs. 8,999
+                </div>
+
+                <button class="cart-btn"
+                        onclick="addToCart('Classic Black Suit',8999)">
+                    Add to Cart
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- ================= OFFER ================= -->
+
+<section class="offer">
+
+    <h2>
+        🔥 Men's Fashion Sale
+    </h2>
+
+    <p>
+        Get up to <strong>40% OFF</strong>
+        on selected men's clothing.
+    </p>
+
+    <a href="#collection" class="shop-btn">
+        SHOP SALE
+    </a>
+
+</section>
+
+
+
+<!-- ================= FOOTER ================= -->
+
+<footer>
+
+    <h2>
+        FLERIX
+    </h2>
+
+    <p>
+        Premium fashion for Men, Women & Kids.
+    </p>
+
+    <p>
+        👕 Men &nbsp; | &nbsp;
+        👗 Women &nbsp; | &nbsp;
+        👶 Kids
+    </p>
+
+    <p>
+        © 2026 FLERIX Fashion. All Rights Reserved.
+    </p>
+
+</footer>
+
+
+
+<!-- ================= JAVASCRIPT ================= -->
+
+<script>
+
+    /* ADD TO CART */
+
+    function addToCart(name, price) {
+
+        let cart =
+            JSON.parse(localStorage.getItem("flerixCart")) || [];
+
+        cart.push({
+            name: name,
+            price: price,
+            quantity: 1
+        });
+
+        localStorage.setItem(
+            "flerixCart",
+            JSON.stringify(cart)
+        );
+
+        alert(
+            name + " has been added to your cart! 🛒"
+        );
+    }
+
+
+
+    /* FILTER PRODUCTS */
+
+    function filterProducts(category, button) {
+
+        let products =
+            document.querySelectorAll(".product");
+
+        products.forEach(function(product) {
+
+            if (category === "all") {
+
+                product.style.display = "block";
+
+            }
+
+            else if (
+                product.classList.contains(category)
+            ) {
+
+                product.style.display = "block";
+
+            }
+
+            else {
+
+                product.style.display = "none";
+
+            }
+
+        });
+
+
+        /* ACTIVE BUTTON */
+
+        let buttons =
+            document.querySelectorAll(".filter");
+
+        buttons.forEach(function(btn) {
+
+            btn.classList.remove("active");
+
+        });
+
+        button.classList.add("active");
+
+    }
+
+</script>
+
+
+</body>
+</html>
+```

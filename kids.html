@@ -1,1 +1,619 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Kids Collection | FLERIX Fashion</title>
+
+    <meta name="description"
+          content="Shop the latest kids fashion at FLERIX. Discover stylish, comfortable and affordable clothes for boys and girls.">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background: #fffaf7;
+            color: #333;
+        }
+
+        /* NAVBAR */
+        header {
+            background: #ffffff;
+            padding: 18px 7%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .logo {
+            font-size: 30px;
+            font-weight: bold;
+            letter-spacing: 2px;
+            color: #ff5c8a;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #333;
+            margin-left: 25px;
+            font-weight: 600;
+        }
+
+        nav a:hover {
+            color: #ff5c8a;
+        }
+
+        /* HERO */
+        .hero {
+            min-height: 420px;
+            padding: 70px 7%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background: linear-gradient(135deg, #ffe4ec, #e6f7ff);
+        }
+
+        .hero-text {
+            max-width: 520px;
+        }
+
+        .hero-text span {
+            color: #ff5c8a;
+            font-weight: bold;
+            font-size: 18px;
+        }
+
+        .hero-text h1 {
+            font-size: 52px;
+            margin: 15px 0;
+            line-height: 1.1;
+        }
+
+        .hero-text p {
+            font-size: 18px;
+            line-height: 1.7;
+            margin-bottom: 25px;
+        }
+
+        .shop-btn {
+            display: inline-block;
+            background: #ff5c8a;
+            color: white;
+            padding: 14px 28px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .shop-btn:hover {
+            background: #e83e70;
+        }
+
+        .hero-img {
+            width: 43%;
+            border-radius: 25px;
+        }
+
+        /* CATEGORIES */
+        .section {
+            padding: 60px 7%;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 35px;
+        }
+
+        .section-title h2 {
+            font-size: 35px;
+            margin-bottom: 10px;
+        }
+
+        .section-title p {
+            color: #777;
+        }
+
+        .categories {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+
+        .category {
+            border: none;
+            background: white;
+            padding: 13px 25px;
+            border-radius: 25px;
+            cursor: pointer;
+            font-weight: bold;
+            box-shadow: 0 3px 12px rgba(0,0,0,0.08);
+        }
+
+        .category:hover,
+        .category.active {
+            background: #ff5c8a;
+            color: white;
+        }
+
+        /* PRODUCTS */
+        .products {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 25px;
+        }
+
+        .product {
+            background: white;
+            border-radius: 18px;
+            overflow: hidden;
+            box-shadow: 0 5px 18px rgba(0,0,0,0.08);
+            transition: 0.3s;
+        }
+
+        .product:hover {
+            transform: translateY(-7px);
+        }
+
+        .product img {
+            width: 100%;
+            height: 260px;
+            object-fit: cover;
+        }
+
+        .product-info {
+            padding: 18px;
+        }
+
+        .product-info h3 {
+            margin-bottom: 8px;
+        }
+
+        .rating {
+            color: #ffb400;
+            margin-bottom: 10px;
+        }
+
+        .price {
+            font-size: 20px;
+            font-weight: bold;
+            color: #ff5c8a;
+            margin-bottom: 15px;
+        }
+
+        .cart-btn {
+            width: 100%;
+            padding: 11px;
+            border: none;
+            border-radius: 8px;
+            background: #333;
+            color: white;
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+        .cart-btn:hover {
+            background: #ff5c8a;
+        }
+
+        /* OFFER */
+        .offer {
+            margin: 30px 7%;
+            padding: 45px;
+            text-align: center;
+            border-radius: 25px;
+            background: linear-gradient(135deg, #ffb6c9, #b8e8ff);
+        }
+
+        .offer h2 {
+            font-size: 32px;
+            margin-bottom: 10px;
+        }
+
+        .offer p {
+            margin-bottom: 20px;
+        }
+
+        /* FOOTER */
+        footer {
+            background: #222;
+            color: white;
+            padding: 45px 7%;
+            text-align: center;
+        }
+
+        footer h2 {
+            color: #ff5c8a;
+            margin-bottom: 12px;
+        }
+
+        footer p {
+            color: #ccc;
+            margin: 8px;
+        }
+
+        /* MOBILE */
+        @media (max-width: 768px) {
+
+            header {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            nav a {
+                margin: 0 8px;
+                font-size: 14px;
+            }
+
+            .hero {
+                flex-direction: column;
+                text-align: center;
+                gap: 30px;
+            }
+
+            .hero-text h1 {
+                font-size: 38px;
+            }
+
+            .hero-img {
+                width: 90%;
+            }
+
+            .section {
+                padding: 45px 5%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<!-- NAVIGATION -->
+<header>
+    <div class="logo">FLERIX</div>
+
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="shop.html">Shop</a>
+        <a href="men.html">Men</a>
+        <a href="women.html">Women</a>
+        <a href="kids.html">Kids</a>
+        <a href="cart.html">Cart 🛒</a>
+    </nav>
+</header>
+
+
+<!-- HERO SECTION -->
+<section class="hero">
+
+    <div class="hero-text">
+        <span>✨ FLERIX KIDS COLLECTION</span>
+
+        <h1>
+            Little Styles,<br>
+            Big Smiles!
+        </h1>
+
+        <p>
+            Discover cute, comfortable and stylish outfits
+            specially designed for your little ones.
+        </p>
+
+        <a href="#products" class="shop-btn">
+            Shop Kids Collection
+        </a>
+    </div>
+
+    <img
+        class="hero-img"
+        src="https://images.unsplash.com/photo-1503919545889-aef636e10ad4?auto=format&fit=crop&w=800&q=80"
+        alt="Kids Fashion">
+</section>
+
+
+<!-- CATEGORIES -->
+<section class="section">
+
+    <div class="section-title">
+        <h2>Shop By Category</h2>
+        <p>Find the perfect style for your little fashion stars.</p>
+    </div>
+
+    <div class="categories">
+
+        <button class="category active" onclick="filterProducts('all')">
+            All
+        </button>
+
+        <button class="category" onclick="filterProducts('boys')">
+            👦 Boys
+        </button>
+
+        <button class="category" onclick="filterProducts('girls')">
+            👧 Girls
+        </button>
+
+        <button class="category" onclick="filterProducts('babies')">
+            👶 Babies
+        </button>
+
+        <button class="category" onclick="filterProducts('sale')">
+            🔥 Sale
+        </button>
+
+    </div>
+
+</section>
+
+
+<!-- PRODUCTS -->
+<section class="section" id="products">
+
+    <div class="section-title">
+        <h2>Kids Best Sellers</h2>
+        <p>Trending styles from the FLERIX Kids Collection.</p>
+    </div>
+
+    <div class="products">
+
+        <!-- PRODUCT 1 -->
+        <div class="product boys">
+
+            <img
+                src="https://images.unsplash.com/photo-1519457431-44ccd64a579b?auto=format&fit=crop&w=600&q=80"
+                alt="Boys Casual Outfit">
+
+            <div class="product-info">
+
+                <h3>Cool Boys T-Shirt</h3>
+
+                <div class="rating">
+                    ★★★★★
+                </div>
+
+                <div class="price">
+                    Rs. 1,499
+                </div>
+
+                <button class="cart-btn"
+                        onclick="addToCart('Cool Boys T-Shirt',1499)">
+                    Add to Cart
+                </button>
+
+            </div>
+        </div>
+
+
+        <!-- PRODUCT 2 -->
+        <div class="product girls">
+
+            <img
+                src="https://images.unsplash.com/photo-1518831959646-742c3a14ebf7?auto=format&fit=crop&w=600&q=80"
+                alt="Girls Dress">
+
+            <div class="product-info">
+
+                <h3>Pretty Girls Dress</h3>
+
+                <div class="rating">
+                    ★★★★★
+                </div>
+
+                <div class="price">
+                    Rs. 2,199
+                </div>
+
+                <button class="cart-btn"
+                        onclick="addToCart('Pretty Girls Dress',2199)">
+                    Add to Cart
+                </button>
+
+            </div>
+        </div>
+
+
+        <!-- PRODUCT 3 -->
+        <div class="product babies">
+
+            <img
+                src="https://images.unsplash.com/photo-1519340241574-2cec6aef0c01?auto=format&fit=crop&w=600&q=80"
+                alt="Baby Outfit">
+
+            <div class="product-info">
+
+                <h3>Baby Comfort Set</h3>
+
+                <div class="rating">
+                    ★★★★★
+                </div>
+
+                <div class="price">
+                    Rs. 1,799
+                </div>
+
+                <button class="cart-btn"
+                        onclick="addToCart('Baby Comfort Set',1799)">
+                    Add to Cart
+                </button>
+
+            </div>
+        </div>
+
+
+        <!-- PRODUCT 4 -->
+        <div class="product boys sale">
+
+            <img
+                src="https://images.unsplash.com/photo-1520975958225-8f61d5f7d1a7?auto=format&fit=crop&w=600&q=80"
+                alt="Kids Hoodie">
+
+            <div class="product-info">
+
+                <h3>Kids Street Hoodie</h3>
+
+                <div class="rating">
+                    ★★★★☆
+                </div>
+
+                <div class="price">
+                    Rs. 1,899
+                </div>
+
+                <button class="cart-btn"
+                        onclick="addToCart('Kids Street Hoodie',1899)">
+                    Add to Cart
+                </button>
+
+            </div>
+        </div>
+
+
+        <!-- PRODUCT 5 -->
+        <div class="product girls sale">
+
+            <img
+                src="https://images.unsplash.com/photo-1518831959646-742c3a14ebf7?auto=format&fit=crop&w=600&q=80"
+                alt="Girls Summer Dress">
+
+            <div class="product-info">
+
+                <h3>Summer Girls Dress</h3>
+
+                <div class="rating">
+                    ★★★★★
+                </div>
+
+                <div class="price">
+                    Rs. 1,599
+                </div>
+
+                <button class="cart-btn"
+                        onclick="addToCart('Summer Girls Dress',1599)">
+                    Add to Cart
+                </button>
+
+            </div>
+        </div>
+
+
+        <!-- PRODUCT 6 -->
+        <div class="product boys">
+
+            <img
+                src="https://images.unsplash.com/photo-1622290291468-a28f7a7dc6a8?auto=format&fit=crop&w=600&q=80"
+                alt="Boys Shirt">
+
+            <div class="product-info">
+
+                <h3>Mini Fashion Shirt</h3>
+
+                <div class="rating">
+                    ★★★★★
+                </div>
+
+                <div class="price">
+                    Rs. 1,699
+                </div>
+
+                <button class="cart-btn"
+                        onclick="addToCart('Mini Fashion Shirt',1699)">
+                    Add to Cart
+                </button>
+
+            </div>
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- SPECIAL OFFER -->
+<section class="offer">
+
+    <h2>🎉 Kids Special Offer!</h2>
+
+    <p>
+        Get up to <strong>30% OFF</strong> on selected kids styles.
+    </p>
+
+    <a href="#products" class="shop-btn">
+        Shop Sale
+    </a>
+
+</section>
+
+
+<!-- FOOTER -->
+<footer>
+
+    <h2>FLERIX</h2>
+
+    <p>
+        Fashion for everyone — Men, Women & Kids.
+    </p>
+
+    <p>
+        © 2026 FLERIX Fashion. All Rights Reserved.
+    </p>
+
+</footer>
+
+
+<!-- JAVASCRIPT -->
+<script>
+
+    function addToCart(productName, price) {
+
+        let cart = JSON.parse(localStorage.getItem("flerixCart")) || [];
+
+        cart.push({
+            name: productName,
+            price: price
+        });
+
+        localStorage.setItem("flerixCart", JSON.stringify(cart));
+
+        alert(productName + " added to your cart! 🛒");
+    }
+
+
+    function filterProducts(category) {
+
+        let products = document.querySelectorAll(".product");
+
+        products.forEach(function(product) {
+
+            if (category === "all") {
+                product.style.display = "block";
+            }
+
+            else if (product.classList.contains(category)) {
+                product.style.display = "block";
+            }
+
+            else {
+                product.style.display = "none";
+            }
+
+        });
+
+    }
+
+</script>
+
+</body>
+</html>
+```
 

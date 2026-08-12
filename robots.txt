@@ -1,4 +1,3 @@
 User-agent: *
 Allow: /
-
 https://hameedf769-coder.github.io/flerox/Sitemaps.xml

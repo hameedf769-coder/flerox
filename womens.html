@@ -8,7 +8,494 @@
     <title>Women's Collection | FLERIX</title>
 ```html
 <section class="genz-fashion" id="genz">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+  <title>Flerix Women | Women's Fashion Collection</title>
+
+  <meta name="description"
+        content="Shop the latest women's fashion at Flerix — trendy dresses, tops, jeans, jackets and more for your perfect Gen Z look.">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
+
+    body {
+      background: #fafafa;
+      color: #222;
+    }
+
+    /* NAVBAR */
+    nav {
+      background: #111;
+      color: white;
+      padding: 18px 7%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    .logo {
+      font-size: 30px;
+      font-weight: bold;
+      letter-spacing: 3px;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 30px;
+    }
+
+    nav ul li a {
+      color: white;
+      text-decoration: none;
+      font-size: 15px;
+    }
+
+    nav ul li a:hover {
+      color: #ff4f81;
+    }
+
+    /* HERO */
+    .hero {
+      min-height: 500px;
+      background:
+        linear-gradient(rgba(0,0,0,.35), rgba(0,0,0,.35)),
+        url("https://images.unsplash.com/photo-1483985988355-763728e1935b?auto=format&fit=crop&w=1600&q=80")
+        center/cover;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      color: white;
+      padding: 40px;
+    }
+
+    .hero h1 {
+      font-size: 60px;
+      text-transform: uppercase;
+      letter-spacing: 4px;
+    }
+
+    .hero p {
+      font-size: 20px;
+      margin: 15px 0 25px;
+    }
+
+    .hero button {
+      background: #ff4f81;
+      color: white;
+      border: none;
+      padding: 14px 35px;
+      font-size: 16px;
+      cursor: pointer;
+      border-radius: 25px;
+    }
+
+    .hero button:hover {
+      background: #e73368;
+    }
+
+    /* TITLE */
+    .section-title {
+      text-align: center;
+      padding: 55px 20px 25px;
+    }
+
+    .section-title h2 {
+      font-size: 38px;
+      margin-bottom: 10px;
+    }
+
+    .section-title p {
+      color: #777;
+    }
+
+    /* FILTERS */
+    .filters {
+      display: flex;
+      justify-content: center;
+      gap: 12px;
+      flex-wrap: wrap;
+      padding: 20px;
+    }
+
+    .filters button {
+      padding: 10px 20px;
+      background: white;
+      border: 1px solid #ddd;
+      border-radius: 20px;
+      cursor: pointer;
+    }
+
+    .filters button:hover {
+      background: #111;
+      color: white;
+    }
+
+    /* PRODUCTS */
+    .products {
+      width: 86%;
+      margin: 20px auto 70px;
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 25px;
+    }
+
+    .card {
+      background: white;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 5px 20px rgba(0,0,0,.08);
+      transition: .3s;
+    }
+
+    .card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 10px 30px rgba(0,0,0,.15);
+    }
+
+    .card img {
+      width: 100%;
+      height: 360px;
+      object-fit: cover;
+    }
+
+    .card-info {
+      padding: 18px;
+    }
+
+    .card-info h3 {
+      font-size: 18px;
+      margin-bottom: 8px;
+    }
+
+    .category {
+      color: #888;
+      font-size: 14px;
+    }
+
+    .price {
+      font-size: 19px;
+      font-weight: bold;
+      margin: 12px 0;
+    }
+
+    .old-price {
+      text-decoration: line-through;
+      color: #999;
+      font-size: 14px;
+      margin-left: 5px;
+    }
+
+    .shop-btn {
+      width: 100%;
+      padding: 11px;
+      border: none;
+      background: #111;
+      color: white;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .shop-btn:hover {
+      background: #ff4f81;
+    }
+
+    /* SALE BANNER */
+    .sale {
+      width: 86%;
+      margin: 20px auto 60px;
+      min-height: 260px;
+      background:
+        linear-gradient(rgba(0,0,0,.45),rgba(0,0,0,.45)),
+        url("https://images.unsplash.com/photo-1485968579580-b6d095142e6e?auto=format&fit=crop&w=1400&q=80")
+        center/cover;
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      border-radius: 15px;
+    }
+
+    .sale h2 {
+      font-size: 45px;
+    }
+
+    .sale p {
+      margin: 12px 0 20px;
+      font-size: 18px;
+    }
+
+    .sale button {
+      padding: 13px 30px;
+      border: none;
+      background: white;
+      color: #111;
+      border-radius: 25px;
+      cursor: pointer;
+      font-weight: bold;
+    }
+
+    /* FOOTER */
+    footer {
+      background: #111;
+      color: white;
+      text-align: center;
+      padding: 35px;
+    }
+
+    footer h2 {
+      letter-spacing: 3px;
+      margin-bottom: 10px;
+    }
+
+    footer p {
+      color: #aaa;
+    }
+
+    /* MOBILE */
+    @media (max-width: 1000px) {
+      .products {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 600px) {
+
+      nav {
+        flex-direction: column;
+        gap: 15px;
+      }
+
+      nav ul {
+        gap: 15px;
+      }
+
+      .hero h1 {
+        font-size: 38px;
+      }
+
+      .hero p {
+        font-size: 16px;
+      }
+
+      .products {
+        grid-template-columns: 1fr;
+      }
+
+      .card img {
+        height: 430px;
+      }
+
+      .sale h2 {
+        font-size: 30px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- NAVIGATION -->
+  <nav>
+    <div class="logo">FLERIX</div>
+
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="women.html">Women</a></li>
+      <li><a href="men.html">Men</a></li>
+      <li><a href="kids.html">Kids</a></li>
+      <li><a href="cart.html">🛒 Cart</a></li>
+    </ul>
+  </nav>
+
+
+  <!-- HERO SECTION -->
+  <section class="hero">
+    <div>
+      <h1>Women's Collection</h1>
+      <p>Own Your Style. Be Unforgettable.</p>
+      <button onclick="document.getElementById('collection').scrollIntoView()">
+        SHOP NOW
+      </button>
+    </div>
+  </section>
+
+
+  <!-- COLLECTION TITLE -->
+  <section class="section-title" id="collection">
+    <h2>New Women's Arrivals</h2>
+    <p>Trending styles curated for the Flerix girl.</p>
+  </section>
+
+
+  <!-- FILTERS -->
+  <div class="filters">
+    <button>All</button>
+    <button>Dresses</button>
+    <button>Tops</button>
+    <button>Jeans</button>
+    <button>Jackets</button>
+    <button>Sale</button>
+  </div>
+
+
+  <!-- PRODUCT GRID -->
+  <section class="products">
+
+    <!-- PRODUCT 1 -->
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1496747611176-843222e1e57c?auto=format&fit=crop&w=800&q=80"
+           alt="Women's elegant dress">
+
+      <div class="card-info">
+        <h3>Elegant Summer Dress</h3>
+        <p class="category">Dresses</p>
+        <p class="price">
+          Rs. 4,999
+          <span class="old-price">Rs. 6,499</span>
+        </p>
+        <button class="shop-btn">Add to Cart</button>
+      </div>
+    </div>
+
+
+    <!-- PRODUCT 2 -->
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1485230895905-ec40ba36b9bc?auto=format&fit=crop&w=800&q=80"
+           alt="Women's fashion outfit">
+
+      <div class="card-info">
+        <h3>Urban Chic Outfit</h3>
+        <p class="category">New Arrival</p>
+        <p class="price">Rs. 5,499</p>
+        <button class="shop-btn">Add to Cart</button>
+      </div>
+    </div>
+
+
+    <!-- PRODUCT 3 -->
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1539008835657-9e8e9680c956?auto=format&fit=crop&w=800&q=80"
+           alt="Women's black dress">
+
+      <div class="card-info">
+        <h3>Midnight Black Dress</h3>
+        <p class="category">Dresses</p>
+        <p class="price">Rs. 6,999</p>
+        <button class="shop-btn">Add to Cart</button>
+      </div>
+    </div>
+
+
+    <!-- PRODUCT 4 -->
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1543076447-215ad9ba6923?auto=format&fit=crop&w=800&q=80"
+           alt="Women's casual fashion">
+
+      <div class="card-info">
+        <h3>Casual Street Look</h3>
+        <p class="category">Casual Wear</p>
+        <p class="price">Rs. 3,999</p>
+        <button class="shop-btn">Add to Cart</button>
+      </div>
+    </div>
+
+
+    <!-- PRODUCT 5 -->
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1551488831-00ddcb6c6bd3?auto=format&fit=crop&w=800&q=80"
+           alt="Women's denim jacket">
+
+      <div class="card-info">
+        <h3>Oversized Denim Jacket</h3>
+        <p class="category">Jackets</p>
+        <p class="price">Rs. 4,499</p>
+        <button class="shop-btn">Add to Cart</button>
+      </div>
+    </div>
+
+
+    <!-- PRODUCT 6 -->
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1529139574466-a303027c1d8b?auto=format&fit=crop&w=800&q=80"
+           alt="Women's trendy outfit">
+
+      <div class="card-info">
+        <h3>Gen Z Trend Set</h3>
+        <p class="category">Trending</p>
+        <p class="price">
+          Rs. 5,999
+          <span class="old-price">Rs. 7,499</span>
+        </p>
+        <button class="shop-btn">Add to Cart</button>
+      </div>
+    </div>
+
+
+    <!-- PRODUCT 7 -->
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?auto=format&fit=crop&w=800&q=80"
+           alt="Women's modern fashion">
+
+      <div class="card-info">
+        <h3>Modern Flerix Set</h3>
+        <p class="category">New Arrival</p>
+        <p class="price">Rs. 4,799</p>
+        <button class="shop-btn">Add to Cart</button>
+      </div>
+    </div>
+
+
+    <!-- PRODUCT 8 -->
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1551048632-24e9b5a4c6a5?auto=format&fit=crop&w=800&q=80"
+           alt="Women's fashion collection">
+
+      <div class="card-info">
+        <h3>Premium Fashion Look</h3>
+        <p class="category">Premium</p>
+        <p class="price">Rs. 7,499</p>
+        <button class="shop-btn">Add to Cart</button>
+      </div>
+    </div>
+
+  </section>
+
+
+  <!-- SALE BANNER -->
+  <section class="sale">
+    <div>
+      <h2>UP TO 50% OFF</h2>
+      <p>Refresh your wardrobe with Flerix Women's Collection.</p>
+      <button>SHOP SALE</button>
+    </div>
+  </section>
+
+
+  <!-- FOOTER -->
+  <footer>
+    <h2>FLERIX</h2>
+    <p>Fashion made for your vibe ✨</p>
+    <br>
+    <p>© 2026 Flerix Fashion. All Rights Reserved.</p>
+  </footer>
+
+</body>
+</html>
   <div class="container">
 
     <div class="collection-heading">

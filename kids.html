@@ -8,7 +8,175 @@
     <title>Kids Collection | FLERIX Fashion</title>
     <meta name="description"
           content="Shop the latest kids fashion at FLERIX. Discover stylish, comfortable and affordable clothes for boys and girls.">
+<section class="kids-fashion" id="kids">
+  <div class="container">
 
+    <h1>Flerix Kids – Cute & Comfortable Kids' Clothing</h1>
+
+    <p class="kids-intro">
+      Discover Flerix Kids, a fun collection of comfortable and stylish
+      clothing for children. Shop kids' t-shirts, hoodies, dresses,
+      jeans, shorts, pajamas, and everyday outfits.
+    </p>
+
+    <div class="kids-categories">
+      <a href="/kids/t-shirts">Kids T-Shirts</a>
+      <a href="/kids/dresses">Kids Dresses</a>
+      <a href="/kids/hoodies">Kids Hoodies</a>
+      <a href="/kids/jeans">Kids Jeans</a>
+      <a href="/kids/shorts">Kids Shorts</a>
+      <a href="/kids/pajamas">Kids Pajamas</a>
+    </div>
+
+    <div class="product-grid">
+
+      <article class="product-card">
+        <img src="/images/kids-tshirt.jpg"
+             alt="Flerix Kids cotton t-shirt">
+        <h2>Classic Cotton T-Shirt</h2>
+        <p>Soft and comfortable everyday t-shirt for kids.</p>
+        <span class="price">$14.99</span>
+        <button>Add to Cart</button>
+      </article>
+
+      <article class="product-card">
+        <img src="/images/kids-hoodie.jpg"
+             alt="Flerix Kids comfortable hoodie">
+        <h2>Cozy Kids Hoodie</h2>
+        <p>Warm, comfortable hoodie for everyday adventures.</p>
+        <span class="price">$24.99</span>
+        <button>Add to Cart</button>
+      </article>
+
+      <article class="product-card">
+        <img src="/images/kids-dress.jpg"
+             alt="Flerix Kids stylish dress">
+        <h2>Kids Casual Dress</h2>
+        <p>Stylish and comfortable dress for special days and outings.</p>
+        <span class="price">$29.99</span>
+        <button>Add to Cart</button>
+      </article>
+
+      <article class="product-card">
+        <img src="/images/kids-jeans.jpg"
+             alt="Flerix Kids denim jeans">
+        <h2>Classic Denim Jeans</h2>
+        <p>Durable and comfortable jeans designed for active kids.</p>
+        <span class="price">$27.99</span>
+        <button>Add to Cart</button>
+      </article>
+
+    </div>
+
+  </div>
+</section>
+
+<style>
+.kids-fashion {
+  padding: 60px 20px;
+  background: #fff7fb;
+  font-family: Arial, sans-serif;
+}
+
+.container {
+  max-width: 1200px;
+  margin: auto;
+}
+
+.kids-fashion h1 {
+  text-align: center;
+  font-size: 38px;
+  color: #222;
+}
+
+.kids-intro {
+  max-width: 750px;
+  margin: 15px auto 35px;
+  text-align: center;
+  color: #666;
+  line-height: 1.7;
+}
+
+.kids-categories {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-bottom: 40px;
+}
+
+.kids-categories a {
+  padding: 12px 20px;
+  border-radius: 25px;
+  background: #ff5c8a;
+  color: white;
+  text-decoration: none;
+}
+
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 22px;
+}
+
+.product-card {
+  background: white;
+  padding: 15px;
+  border-radius: 16px;
+  box-shadow: 0 5px 20px rgba(0,0,0,.08);
+}
+
+.product-card img {
+  width: 100%;
+  height: 260px;
+  object-fit: cover;
+  border-radius: 12px;
+}
+
+.product-card h2 {
+  font-size: 19px;
+  margin-bottom: 8px;
+}
+
+.product-card p {
+  color: #777;
+  line-height: 1.5;
+}
+
+.price {
+  display: block;
+  font-size: 20px;
+  font-weight: bold;
+  color: #ff3f78;
+  margin: 12px 0;
+}
+
+.product-card button {
+  width: 100%;
+  border: 0;
+  padding: 13px;
+  border-radius: 10px;
+  background: #222;
+  color: white;
+  cursor: pointer;
+}
+
+.product-card button:hover {
+  background: #ff3f78;
+}
+
+@media (max-width: 900px) {
+  .product-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 500px) {
+  .product-grid {
+    grid-template-columns: 1fr;
+  }
+}
+</style>
     <style>
         * {
             margin: 0;

@@ -1094,7 +1094,991 @@
 
         </div>
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+<title>FLERIX | Men's Collection</title>
+
+<meta name="description"
+content="Discover FLERIX Men's Collection — premium men's shirts, oversized T-shirts, hoodies, jackets, jeans and modern streetwear.">
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial,Helvetica,sans-serif;
+}
+
+body{
+    background:#f5f5f5;
+    color:#111;
+}
+
+/* NAVBAR */
+
+nav{
+    height:75px;
+    background:#fff;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    padding:0 6%;
+    position:sticky;
+    top:0;
+    z-index:999;
+    box-shadow:0 2px 15px rgba(0,0,0,.08);
+}
+
+.logo{
+    font-size:32px;
+    font-weight:900;
+    letter-spacing:3px;
+}
+
+.logo span{
+    color:#777;
+}
+
+nav ul{
+    display:flex;
+    gap:30px;
+    list-style:none;
+}
+
+nav ul a{
+    text-decoration:none;
+    color:#111;
+    font-weight:bold;
+}
+
+nav ul a:hover{
+    color:#777;
+}
+
+.cart{
+    background:#111;
+    color:#fff;
+    padding:11px 20px;
+    border-radius:25px;
+    text-decoration:none;
+}
+
+/* HERO */
+
+.hero{
+    height:650px;
+    background:
+    linear-gradient(rgba(0,0,0,.35),rgba(0,0,0,.55)),
+    url("https://images.unsplash.com/photo-1617137968427-85924c800a22?auto=format&fit=crop&w=1800&q=90");
+    background-size:cover;
+    background-position:center;
+    display:flex;
+    align-items:center;
+    padding:0 8%;
+    color:white;
+}
+
+.hero-content{
+    max-width:650px;
+}
+
+.hero small{
+    font-size:16px;
+    letter-spacing:4px;
+}
+
+.hero h1{
+    font-size:75px;
+    line-height:.95;
+    margin:20px 0;
+    font-weight:900;
+}
+
+.hero p{
+    font-size:20px;
+    margin-bottom:30px;
+}
+
+.hero-btn{
+    display:inline-block;
+    background:white;
+    color:#111;
+    padding:15px 32px;
+    border-radius:30px;
+    text-decoration:none;
+    font-weight:bold;
+    transition:.3s;
+}
+
+.hero-btn:hover{
+    background:#111;
+    color:white;
+}
+
+/* SECTION */
+
+.collection{
+    padding:80px 7%;
+}
+
+.title{
+    text-align:center;
+    margin-bottom:45px;
+}
+
+.title h2{
+    font-size:45px;
+    margin-bottom:10px;
+}
+
+.title p{
+    color:#666;
+}
+
+/* FILTER */
+
+.filters{
+    display:flex;
+    justify-content:center;
+    flex-wrap:wrap;
+    gap:12px;
+    margin-bottom:45px;
+}
+
+.filter{
+    border:1px solid #111;
+    background:white;
+    padding:11px 25px;
+    border-radius:30px;
+    cursor:pointer;
+    transition:.3s;
+}
+
+.filter:hover,
+.filter.active{
+    background:#111;
+    color:white;
+}
+
+/* PRODUCTS */
+
+.products{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:25px;
+}
+
+.product{
+    background:white;
+    overflow:hidden;
+    border-radius:14px;
+    transition:.3s;
+}
+
+.product:hover{
+    transform:translateY(-8px);
+    box-shadow:0 15px 35px rgba(0,0,0,.13);
+}
+
+.image-box{
+    position:relative;
+    overflow:hidden;
+}
+
+.product img{
+    width:100%;
+    height:400px;
+    object-fit:cover;
+    display:block;
+    transition:.5s;
+}
+
+.product:hover img{
+    transform:scale(1.05);
+}
+
+.badge{
+    position:absolute;
+    top:15px;
+    left:15px;
+    background:#111;
+    color:white;
+    padding:7px 12px;
+    border-radius:20px;
+    font-size:12px;
+    font-weight:bold;
+}
+
+.heart{
+    position:absolute;
+    top:15px;
+    right:15px;
+    background:white;
+    width:38px;
+    height:38px;
+    border-radius:50%;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    cursor:pointer;
+    font-size:20px;
+}
+
+.info{
+    padding:20px;
+}
+
+.info h3{
+    font-size:18px;
+    margin-bottom:8px;
+}
+
+.info p{
+    color:#777;
+    font-size:14px;
+    margin-bottom:12px;
+}
+
+.price{
+    font-size:20px;
+    font-weight:bold;
+    margin-bottom:15px;
+}
+
+.old-price{
+    color:#999;
+    text-decoration:line-through;
+    font-size:14px;
+    margin-left:5px;
+}
+
+.add{
+    width:100%;
+    border:0;
+    background:#111;
+    color:white;
+    padding:13px;
+    border-radius:25px;
+    cursor:pointer;
+    font-weight:bold;
+    transition:.3s;
+}
+
+.add:hover{
+    background:#444;
+}
+
+/* PROMO */
+
+.promo{
+    margin:20px 7% 80px;
+    padding:70px 30px;
+    background:#111;
+    color:white;
+    text-align:center;
+    border-radius:20px;
+}
+
+.promo h2{
+    font-size:45px;
+    margin-bottom:15px;
+}
+
+.promo p{
+    color:#ccc;
+    margin-bottom:25px;
+}
+
+/* FOOTER */
+
+footer{
+    background:#111;
+    color:white;
+    padding:55px 7%;
+    text-align:center;
+}
+
+footer h2{
+    font-size:32px;
+    letter-spacing:3px;
+    margin-bottom:12px;
+}
+
+footer p{
+    color:#aaa;
+    margin:8px;
+}
+
+.social{
+    margin-top:20px;
+}
+
+.social a{
+    color:white;
+    text-decoration:none;
+    margin:0 12px;
+}
+
+/* RESPONSIVE */
+
+@media(max-width:1050px){
+
+    .products{
+        grid-template-columns:repeat(3,1fr);
+    }
+
+}
+
+@media(max-width:800px){
+
+    nav ul{
+        display:none;
+    }
+
+    .hero h1{
+        font-size:55px;
+    }
+
+    .products{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+}
+
+@media(max-width:550px){
+
+    .hero{
+        height:550px;
+    }
+
+    .hero h1{
+        font-size:43px;
+    }
+
+    .products{
+        grid-template-columns:1fr;
+    }
+
+    .product img{
+        height:480px;
+    }
+
+    .title h2{
+        font-size:34px;
+    }
+
+}
+</style>
+</head>
+
+<body>
+
+<!-- NAVIGATION -->
+
+<nav>
+
+<div class="logo">
+FLERIX<span>.</span>
+</div>
+
+<ul>
+<li><a href="index.html">HOME</a></li>
+<li><a href="men.html">MEN</a></li>
+<li><a href="women.html">WOMEN</a></li>
+<li><a href="kids.html">KIDS</a></li>
+<li><a href="shop.html">SHOP</a></li>
+</ul>
+
+<a href="cart.html" class="cart">
+🛒 CART
+</a>
+
+</nav>
+
+
+<!-- HERO -->
+
+<section class="hero">
+
+<div class="hero-content">
+
+<small>FLERIX MEN 2026</small>
+
+<h1>
+MEN'S<br>
+NEW DROP
+</h1>
+
+<p>
+Modern silhouettes. Premium fabrics.
+Streetwear attitude.
+</p>
+
+<a href="#products" class="hero-btn">
+SHOP MEN →
+</a>
+
+</div>
+
+</section>
+
+
+<!-- COLLECTION -->
+
+<section class="collection" id="products">
+
+<div class="title">
+
+<h2>MEN'S COLLECTION</h2>
+
+<p>
+Explore the latest FLERIX styles made for your everyday look.
+</p>
+
+</div>
+
+
+<!-- FILTERS -->
+
+<div class="filters">
+
+<button class="filter active">ALL</button>
+<button class="filter">T-SHIRTS</button>
+<button class="filter">SHIRTS</button>
+<button class="filter">HOODIES</button>
+<button class="filter">JACKETS</button>
+<button class="filter">JEANS</button>
+<button class="filter">STREETWEAR</button>
+
+</div>
+
+
+<!-- PRODUCTS -->
+
+<div class="products">
+
+
+<!-- 1 -->
+
+<div class="product">
+
+<div class="image-box">
+
+<span class="badge">NEW</span>
+
+<div class="heart" onclick="wishlist(this)">♡</div>
+
+<img src="https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?auto=format&fit=crop&w=900&q=90"
+alt="Men white oversized t-shirt">
+
+</div>
+
+<div class="info">
+
+<h3>Essential Oversized Tee</h3>
+
+<p>Premium Cotton • White</p>
+
+<div class="price">
+Rs. 2,499
+</div>
+
+<button class="add"
+onclick="addCart('Essential Oversized Tee',2499)">
+ADD TO CART
+</button>
+
+</div>
+
+</div>
+
+
+<!-- 2 -->
+
+<div class="product">
+
+<div class="image-box">
+
+<span class="badge">BEST SELLER</span>
+
+<div class="heart" onclick="wishlist(this)">♡</div>
+
+<img src="https://images.unsplash.com/photo-1618354691373-d851c5c3a990?auto=format&fit=crop&w=900&q=90"
+alt="Men black graphic t-shirt">
+
+</div>
+
+<div class="info">
+
+<h3>Urban Graphic Tee</h3>
+
+<p>Oversized Fit • Black</p>
+
+<div class="price">
+Rs. 2,799
+</div>
+
+<button class="add"
+onclick="addCart('Urban Graphic Tee',2799)">
+ADD TO CART
+</button>
+
+</div>
+
+</div>
+
+
+<!-- 3 -->
+
+<div class="product">
+
+<div class="image-box">
+
+<div class="heart" onclick="wishlist(this)">♡</div>
+
+<img src="https://images.unsplash.com/photo-1551488831-00ddcb6c6bd3?auto=format&fit=crop&w=900&q=90"
+alt="Men denim jacket">
+
+</div>
+
+<div class="info">
+
+<h3>Classic Denim Jacket</h3>
+
+<p>Premium Denim • Blue</p>
+
+<div class="price">
+Rs. 5,999
+</div>
+
+<button class="add"
+onclick="addCart('Classic Denim Jacket',5999)">
+ADD TO CART
+</button>
+
+</div>
+
+</div>
+
+
+<!-- 4 -->
+
+<div class="product">
+
+<div class="image-box">
+
+<span class="badge">HOT</span>
+
+<div class="heart" onclick="wishlist(this)">♡</div>
+
+<img src="https://images.unsplash.com/photo-1556821840-3a63f95609a7?auto=format&fit=crop&w=900&q=90"
+alt="Black hoodie men">
+
+</div>
+
+<div class="info">
+
+<h3>Flerix Black Hoodie</h3>
+
+<p>Heavy Cotton • Black</p>
+
+<div class="price">
+Rs. 4,499
+</div>
+
+<button class="add"
+onclick="addCart('Flerix Black Hoodie',4499)">
+ADD TO CART
+</button>
+
+</div>
+
+</div>
+
+
+<!-- 5 -->
+
+<div class="product">
+
+<div class="image-box">
+
+<div class="heart" onclick="wishlist(this)">♡</div>
+
+<img src="https://images.unsplash.com/photo-1542272604-787c3835535d?auto=format&fit=crop&w=900&q=90"
+alt="Men blue jeans">
+
+</div>
+
+<div class="info">
+
+<h3>Relaxed Fit Jeans</h3>
+
+<p>Street Fit • Blue</p>
+
+<div class="price">
+Rs. 4,999
+</div>
+
+<button class="add"
+onclick="addCart('Relaxed Fit Jeans',4999)">
+ADD TO CART
+</button>
+
+</div>
+
+</div>
+
+
+<!-- 6 -->
+
+<div class="product">
+
+<div class="image-box">
+
+<span class="badge">NEW</span>
+
+<div class="heart" onclick="wishlist(this)">♡</div>
+
+<img src="https://images.unsplash.com/photo-1591047139829-d91aecb6caea?auto=format&fit=crop&w=900&q=90"
+alt="Men bomber jacket">
+
+</div>
+
+<div class="info">
+
+<h3>Premium Bomber Jacket</h3>
+
+<p>Modern Fit • Black</p>
+
+<div class="price">
+Rs. 7,499
+</div>
+
+<button class="add"
+onclick="addCart('Premium Bomber Jacket',7499)">
+ADD TO CART
+</button>
+
+</div>
+
+</div>
+
+
+<!-- 7 -->
+
+<div class="product">
+
+<div class="image-box">
+
+<div class="heart" onclick="wishlist(this)">♡</div>
+
+<img src="https://images.unsplash.com/photo-1602810318383-e386cc2a3ccf?auto=format&fit=crop&w=900&q=90"
+alt="Men casual shirt">
+
+</div>
+
+<div class="info">
+
+<h3>Relaxed Casual Shirt</h3>
+
+<p>Soft Cotton • Beige</p>
+
+<div class="price">
+Rs. 3,499
+</div>
+
+<button class="add"
+onclick="addCart('Relaxed Casual Shirt',3499)">
+ADD TO CART
+</button>
+
+</div>
+
+</div>
+
+
+<!-- 8 -->
+
+<div class="product">
+
+<div class="image-box">
+
+<span class="badge">SALE</span>
+
+<div class="heart" onclick="wishlist(this)">♡</div>
+
+<img src="https://images.unsplash.com/photo-1503342217505-b0a15ec3261c?auto=format&fit=crop&w=900&q=90"
+alt="Men fashion outfit">
+
+</div>
+
+<div class="info">
+
+<h3>Premium Street Shirt</h3>
+
+<p>Relaxed Fit • White</p>
+
+<div class="price">
+Rs. 3,999
+<span class="old-price">Rs. 5,499</span>
+</div>
+
+<button class="add"
+onclick="addCart('Premium Street Shirt',3999)">
+ADD TO CART
+</button>
+
+</div>
+
+</div>
+
+
+<!-- 9 -->
+
+<div class="product">
+
+<div class="image-box">
+
+<div class="heart" onclick="wishlist(this)">♡</div>
+
+<img src="https://images.unsplash.com/photo-1620799140408-edc6dcb6d633?auto=format&fit=crop&w=900&q=90"
+alt="Men sweatshirt">
+
+</div>
+
+<div class="info">
+
+<h3>Minimal Sweatshirt</h3>
+
+<p>Premium Fleece • Grey</p>
+
+<div class="price">
+Rs. 3,999
+</div>
+
+<button class="add"
+onclick="addCart('Minimal Sweatshirt',3999)">
+ADD TO CART
+</button>
+
+</div>
+
+</div>
+
+
+<!-- 10 -->
+
+<div class="product">
+
+<div class="image-box">
+
+<span class="badge">TRENDING</span>
+
+<div class="heart" onclick="wishlist(this)">♡</div>
+
+<img src="https://images.unsplash.com/photo-1551489186-cf8726f514f8?auto=format&fit=crop&w=900&q=90"
+alt="Men streetwear">
+
+</div>
+
+<div class="info">
+
+<h3>Flerix Streetwear Set</h3>
+
+<p>Urban Collection • Grey</p>
+
+<div class="price">
+Rs. 6,999
+</div>
+
+<button class="add"
+onclick="addCart('Flerix Streetwear Set',6999)">
+ADD TO CART
+</button>
+
+</div>
+
+</div>
+
+
+<!-- 11 -->
+
+<div class="product">
+
+<div class="image-box">
+
+<div class="heart" onclick="wishlist(this)">♡</div>
+
+<img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?auto=format&fit=crop&w=900&q=90"
+alt="Men cargo pants">
+
+</div>
+
+<div class="info">
+
+<h3>Utility Cargo Pants</h3>
+
+<p>Relaxed Fit • Black</p>
+
+<div class="price">
+Rs. 4,799
+</div>
+
+<button class="add"
+onclick="addCart('Utility Cargo Pants',4799)">
+ADD TO CART
+</button>
+
+</div>
+
+</div>
+
+
+<!-- 12 -->
+
+<div class="product">
+
+<div class="image-box">
+
+<span class="badge">LIMITED</span>
+
+<div class="heart" onclick="wishlist(this)">♡</div>
+
+<img src="https://images.unsplash.com/photo-1551028719-00167b16eac5?auto=format&fit=crop&w=900&q=90"
+alt="Men leather jacket">
+
+</div>
+
+<div class="info">
+
+<h3>Classic Leather Jacket</h3>
+
+<p>Premium Finish • Black</p>
+
+<div class="price">
+Rs. 9,999
+</div>
+
+<button class="add"
+onclick="addCart('Classic Leather Jacket',9999)">
+ADD TO CART
+</button>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- PROMO -->
+
+<section class="promo">
+
+<h2>THE FLERIX DROP</h2>
+
+<p>
+Limited styles. Maximum attitude.
+</p>
+
+<a href="shop.html" class="hero-btn">
+EXPLORE ALL
+</a>
+
+</section>
+
+
+<!-- FOOTER -->
+
+<footer>
+
+<h2>FLERIX.</h2>
+
+<p>Fashion that defines your attitude.</p>
+
+<p>© 2026 FLERIX Fashion. All Rights Reserved.</p>
+
+<div class="social">
+
+<a href="#">Instagram</a>
+<a href="#">TikTok</a>
+<a href="#">Facebook</a>
+
+</div>
+
+</footer>
+
+
+<script>
+
+/* ADD TO CART */
+
+function addCart(name,price){
+
+let cart =
+JSON.parse(localStorage.getItem("flerixCart")) || [];
+
+cart.push({
+name:name,
+price:price,
+quantity:1
+});
+
+localStorage.setItem(
+"flerixCart",
+JSON.stringify(cart)
+);
+
+alert(name + " added to your cart! 🛍️");
+
+}
+
+
+/* WISHLIST */
+
+function wishlist(button){
+
+if(button.innerHTML === "♡"){
+
+button.innerHTML = "♥";
+
+}else{
+
+button.innerHTML = "♡";
+
+}
+
+}
+
+
+/* FILTER BUTTON */
+
+const filters =
+document.querySelectorAll(".filter");
+
+filters.forEach(button => {
+
+button.addEventListener("click",function(){
+
+filters.forEach(btn =>
+btn.classList.remove("active"));
+
+this.classList.add("active");
+
+});
+
+});
+
+</script>
+
+</body>
+</html>
 
         <!-- PRODUCT 3 -->
 

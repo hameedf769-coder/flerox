@@ -1,7 +1,56 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+<script>
 
+document.addEventListener("click", function(e){
+
+    for(let i = 0; i < 8; i++){
+
+        const heart = document.createElement("div");
+
+        heart.innerHTML = "❤️";
+
+        heart.style.position = "fixed";
+        heart.style.left = e.clientX + "px";
+        heart.style.top = e.clientY + "px";
+        heart.style.fontSize = "22px";
+        heart.style.pointerEvents = "none";
+        heart.style.zIndex = "10000";
+
+        document.body.appendChild(heart);
+
+        const x =
+            (Math.random() - 0.5) * 200;
+
+        const y =
+            (Math.random() - 0.5) * 200;
+
+        heart.animate([
+
+            {
+                transform:"translate(0,0) scale(1)",
+                opacity:1
+            },
+
+            {
+                transform:
+                `translate(${x}px,${y}px) scale(0)`,
+                opacity:0
+            }
+
+        ],{
+
+            duration:1000,
+            easing:"ease-out"
+
+        }).onfinish = () => heart.remove();
+
+    }
+
+});
+
+</script>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 

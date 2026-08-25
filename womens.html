@@ -1,1 +1,1083 @@
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>FLERIX | Modern Fashion</title>
+
+<meta name="description"
+content="FLERIX — modern fashion for women, men and kids. Discover aesthetic, comfortable and trend-forward styles.">
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:Arial,Helvetica,sans-serif;
+    background:#f8f6f2;
+    color:#111;
+}
+
+
+/* ================= NAVBAR ================= */
+
+nav{
+    position:sticky;
+    top:0;
+    z-index:1000;
+
+    height:75px;
+
+    background:rgba(255,255,255,.95);
+
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+
+    padding:0 6%;
+
+    box-shadow:0 2px 20px rgba(0,0,0,.06);
+}
+
+.logo{
+    font-size:30px;
+    font-weight:900;
+    letter-spacing:6px;
+}
+
+nav ul{
+    list-style:none;
+    display:flex;
+    gap:30px;
+}
+
+nav a{
+    color:#111;
+    text-decoration:none;
+    font-size:13px;
+    font-weight:bold;
+    letter-spacing:1px;
+}
+
+nav a:hover{
+    color:#777;
+}
+
+
+/* ================= HERO ================= */
+
+.hero{
+    min-height:680px;
+    margin:25px 4%;
+
+    border-radius:30px;
+
+    background:
+    linear-gradient(
+        90deg,
+        rgba(248,246,242,.98),
+        rgba(248,246,242,.75),
+        rgba(248,246,242,.05)
+    ),
+
+    url("https://images.unsplash.com/photo-1496747611176-843222e1e57c?auto=format&fit=crop&w=2000&q=90");
+
+    background-size:cover;
+    background-position:center;
+
+    display:flex;
+    align-items:center;
+}
+
+.hero-content{
+    padding:70px;
+    max-width:650px;
+}
+
+.hero-label{
+    font-size:12px;
+    letter-spacing:6px;
+    font-weight:bold;
+    color:#555;
+}
+
+.hero h1{
+    font-size:78px;
+    line-height:.95;
+    letter-spacing:5px;
+    margin:20px 0;
+}
+
+.hero h1 span{
+    font-weight:300;
+}
+
+.hero p{
+    color:#555;
+    line-height:1.8;
+    max-width:470px;
+    margin-bottom:30px;
+}
+
+.btn{
+    display:inline-block;
+    padding:16px 32px;
+    background:#111;
+    color:white;
+    text-decoration:none;
+    border-radius:7px;
+    font-weight:bold;
+    transition:.3s;
+}
+
+.btn:hover{
+    background:#555;
+    transform:translateY(-3px);
+}
+
+
+/* ================= COLLECTION TITLE ================= */
+
+.section-title{
+    text-align:center;
+    padding:70px 20px 35px;
+}
+
+.section-title span{
+    font-size:11px;
+    letter-spacing:5px;
+    color:#777;
+}
+
+.section-title h2{
+    font-size:42px;
+    margin:12px 0;
+}
+
+.section-title p{
+    color:#777;
+}
+
+
+/* ================= COLLECTIONS ================= */
+
+.collections{
+    width:90%;
+    margin:auto;
+
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:25px;
+}
+
+.collection{
+    height:500px;
+    position:relative;
+    overflow:hidden;
+    border-radius:22px;
+}
+
+.collection img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    transition:.6s;
+}
+
+.collection:hover img{
+    transform:scale(1.08);
+}
+
+.collection-overlay{
+    position:absolute;
+    inset:0;
+
+    display:flex;
+    flex-direction:column;
+    justify-content:flex-end;
+
+    padding:35px;
+
+    color:white;
+
+    background:
+    linear-gradient(
+        transparent 35%,
+        rgba(0,0,0,.75)
+    );
+}
+
+.collection-overlay h3{
+    font-size:32px;
+    margin-bottom:8px;
+}
+
+.collection-overlay p{
+    margin-bottom:18px;
+    color:#eee;
+}
+
+.collection-overlay a{
+    color:white;
+    text-decoration:none;
+    font-weight:bold;
+}
+
+
+/* ================= ROTATING WOMEN ================= */
+
+.women-showcase{
+    margin:100px auto;
+    width:100%;
+    height:650px;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    position:relative;
+    overflow:hidden;
+}
+
+.center-circle{
+    width:270px;
+    height:270px;
+
+    border-radius:50%;
+
+    background:white;
+
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+
+    text-align:center;
+
+    position:absolute;
+    z-index:10;
+
+    box-shadow:
+    0 20px 60px rgba(0,0,0,.13);
+}
+
+.center-circle small{
+    letter-spacing:5px;
+    font-size:11px;
+    color:#777;
+}
+
+.center-circle h2{
+    font-size:30px;
+    letter-spacing:4px;
+    margin:12px 0;
+}
+
+.center-circle p{
+    color:#888;
+    font-size:12px;
+}
+
+.orbit{
+    width:540px;
+    height:540px;
+
+    position:absolute;
+
+    animation:spin 24s linear infinite;
+}
+
+.orbit-card{
+    position:absolute;
+
+    width:145px;
+    height:190px;
+
+    overflow:hidden;
+
+    border-radius:20px;
+
+    border:5px solid white;
+
+    box-shadow:
+    0 15px 40px rgba(0,0,0,.16);
+}
+
+.orbit-card img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+}
+
+.orbit1{
+    top:-10px;
+    left:197px;
+}
+
+.orbit2{
+    right:-25px;
+    top:175px;
+}
+
+.orbit3{
+    bottom:-10px;
+    left:197px;
+}
+
+.orbit4{
+    left:-25px;
+    top:175px;
+}
+
+@keyframes spin{
+
+    from{
+        transform:rotate(0deg);
+    }
+
+    to{
+        transform:rotate(360deg);
+    }
+
+}
+
+
+/* ================= PRODUCTS ================= */
+
+.products{
+    width:90%;
+    margin:auto;
+
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+
+    gap:22px;
+
+    padding-bottom:80px;
+}
+
+.product{
+    background:white;
+    border-radius:17px;
+    overflow:hidden;
+
+    box-shadow:
+    0 5px 20px rgba(0,0,0,.06);
+
+    transition:.4s;
+}
+
+.product:hover{
+    transform:translateY(-8px);
+}
+
+.product-image{
+    height:370px;
+    overflow:hidden;
+}
+
+.product-image img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    transition:.5s;
+}
+
+.product:hover img{
+    transform:scale(1.06);
+}
+
+.product-info{
+    padding:20px;
+}
+
+.product-info h3{
+    margin-bottom:8px;
+}
+
+.product-info p{
+    color:#888;
+    font-size:13px;
+    margin-bottom:10px;
+}
+
+.price{
+    font-size:18px;
+    font-weight:bold;
+    margin-bottom:15px;
+}
+
+.cart{
+    width:100%;
+    padding:13px;
+
+    border:none;
+    border-radius:7px;
+
+    background:#111;
+    color:white;
+
+    cursor:pointer;
+    font-weight:bold;
+}
+
+.cart:hover{
+    background:#555;
+}
+
+
+/* ================= BRAND BANNER ================= */
+
+.brand-banner{
+    width:90%;
+    min-height:400px;
+
+    margin:20px auto 90px;
+
+    border-radius:25px;
+
+    background:
+    linear-gradient(
+        90deg,
+        rgba(0,0,0,.75),
+        rgba(0,0,0,.15)
+    ),
+
+    url("https://images.unsplash.com/photo-1445205170230-053b83016050?auto=format&fit=crop&w=2000&q=90");
+
+    background-size:cover;
+    background-position:center;
+
+    color:white;
+
+    display:flex;
+    align-items:center;
+
+    padding:60px;
+}
+
+.brand-banner h2{
+    font-size:55px;
+    letter-spacing:3px;
+    margin-bottom:15px;
+}
+
+.brand-banner p{
+    max-width:500px;
+    line-height:1.7;
+    color:#eee;
+    margin-bottom:25px;
+}
+
+
+/* ================= FOOTER ================= */
+
+footer{
+    background:#111;
+    color:white;
+    text-align:center;
+    padding:65px 20px;
+}
+
+footer h2{
+    font-size:32px;
+    letter-spacing:7px;
+    margin-bottom:15px;
+}
+
+footer p{
+    color:#aaa;
+}
+
+
+/* ================= MOBILE ================= */
+
+@media(max-width:950px){
+
+    nav ul{
+        gap:12px;
+    }
+
+    .collections{
+        grid-template-columns:1fr;
+    }
+
+    .products{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+    .hero h1{
+        font-size:60px;
+    }
+
+}
+
+@media(max-width:600px){
+
+    nav{
+        padding:0 20px;
+    }
+
+    nav ul{
+        display:none;
+    }
+
+    .hero{
+        margin:15px;
+        min-height:600px;
+    }
+
+    .hero-content{
+        padding:35px;
+    }
+
+    .hero h1{
+        font-size:45px;
+    }
+
+    .products{
+        grid-template-columns:1fr;
+    }
+
+    .women-showcase{
+        height:550px;
+    }
+
+    .orbit{
+        width:390px;
+        height:390px;
+    }
+
+    .orbit-card{
+        width:105px;
+        height:145px;
+    }
+
+    .orbit1{
+        left:142px;
+    }
+
+    .orbit2{
+        right:-15px;
+        top:125px;
+    }
+
+    .orbit3{
+        left:142px;
+    }
+
+    .orbit4{
+        left:-15px;
+        top:125px;
+    }
+
+    .center-circle{
+        width:205px;
+        height:205px;
+    }
+
+    .center-circle h2{
+        font-size:22px;
+    }
+
+    .brand-banner{
+        padding:35px;
+    }
+
+    .brand-banner h2{
+        font-size:38px;
+    }
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+
+<!-- ================= NAVIGATION ================= -->
+
+<nav>
+
+    <div class="logo">
+        FLERIX
+    </div>
+
+    <ul>
+
+        <li>
+            <a href="#home">HOME</a>
+        </li>
+
+        <li>
+            <a href="#women">WOMEN</a>
+        </li>
+
+        <li>
+            <a href="#men">MEN</a>
+        </li>
+
+        <li>
+            <a href="#kids">KIDS</a>
+        </li>
+
+        <li>
+            <a href="#shop">SHOP</a>
+        </li>
+
+    </ul>
+
+</nav>
+
+
+<!-- ================= HERO ================= -->
+
+<section class="hero" id="home">
+
+    <div class="hero-content">
+
+        <div class="hero-label">
+            WELCOME TO FLERIX
+        </div>
+
+        <h1>
+            WEAR<br>
+            <span>YOUR</span><br>
+            VIBE.
+        </h1>
+
+        <p>
+            Discover modern fashion created for
+            people who want to express their own
+            style. Elegant, comfortable and
+            effortlessly aesthetic.
+        </p>
+
+        <a href="#shop" class="btn">
+            EXPLORE FLERIX →
+        </a>
+
+    </div>
+
+</section>
+
+
+<!-- ================= COLLECTIONS ================= -->
+
+<section>
+
+    <div class="section-title">
+
+        <span>EXPLORE FLERIX</span>
+
+        <h2>
+            OUR COLLECTIONS
+        </h2>
+
+        <p>
+            Find your style. Find your FLERIX.
+        </p>
+
+    </div>
+
+
+    <div class="collections">
+
+
+        <!-- WOMEN -->
+
+        <div class="collection" id="women">
+
+            <img
+            src="https://images.unsplash.com/photo-1483985988355-763728e1935b?auto=format&fit=crop&w=1000&q=90"
+            alt="FLERIX Women's Collection">
+
+            <div class="collection-overlay">
+
+                <h3>
+                    WOMEN
+                </h3>
+
+                <p>
+                    Soft • Elegant • Aesthetic
+                </p>
+
+                <a href="#">
+                    SHOP WOMEN →
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <!-- MEN -->
+
+        <div class="collection" id="men">
+
+            <img
+            src="https://images.unsplash.com/photo-1490578474895-699cd4e2cf59?auto=format&fit=crop&w=1000&q=90"
+            alt="FLERIX Men's Collection">
+
+            <div class="collection-overlay">
+
+                <h3>
+                    MEN
+                </h3>
+
+                <p>
+                    Clean • Modern • Confident
+                </p>
+
+                <a href="#">
+                    SHOP MEN →
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <!-- KIDS -->
+
+        <div class="collection" id="kids">
+
+            <img
+            src="https://images.unsplash.com/photo-1519238263530-99bdd11df2ea?auto=format&fit=crop&w=1000&q=90"
+            alt="FLERIX Kids Collection">
+
+            <div class="collection-overlay">
+
+                <h3>
+                    KIDS
+                </h3>
+
+                <p>
+                    Cute • Cool • Playful
+                </p>
+
+                <a href="#">
+                    SHOP KIDS →
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= WOMEN ROTATING SHOWCASE ================= -->
+
+<section class="women-showcase">
+
+    <div class="center-circle">
+
+        <small>
+            FLERIX
+        </small>
+
+        <h2>
+            WOMEN
+        </h2>
+
+        <p>
+            AESTHETIC COLLECTION
+        </p>
+
+    </div>
+
+
+    <div class="orbit">
+
+
+        <div class="orbit-card orbit1">
+
+            <img
+            src="https://images.unsplash.com/photo-1496747611176-843222e1e57c?auto=format&fit=crop&w=700&q=90"
+            alt="Women's fashion">
+
+        </div>
+
+
+        <div class="orbit-card orbit2">
+
+            <img
+            src="https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?auto=format&fit=crop&w=700&q=90"
+            alt="Women's aesthetic outfit">
+
+        </div>
+
+
+        <div class="orbit-card orbit3">
+
+            <img
+            src="https://images.unsplash.com/photo-1485230895905-ec40ba36b9bc?auto=format&fit=crop&w=700&q=90"
+            alt="Women's clothing">
+
+        </div>
+
+
+        <div class="orbit-card orbit4">
+
+            <img
+            src="https://images.unsplash.com/photo-1490481651871-ab68de25d43d?auto=format&fit=crop&w=700&q=90"
+            alt="Fashion collection">
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+<!-- ================= PRODUCTS ================= -->
+
+<div class="section-title" id="shop">
+
+    <span>FLERIX ESSENTIALS</span>
+
+    <h2>
+        TRENDING NOW
+    </h2>
+
+    <p>
+        Your next favorite look is waiting.
+    </p>
+
+</div>
+
+
+<section class="products">
+
+
+    <div class="product">
+
+        <div class="product-image">
+
+            <img
+            src="https://images.unsplash.com/photo-1496747611176-843222e1e57c?auto=format&fit=crop&w=800&q=90"
+            alt="FLERIX dress">
+
+        </div>
+
+        <div class="product-info">
+
+            <h3>
+                Minimal Dress
+            </h3>
+
+            <p>
+                Women's Collection
+            </p>
+
+            <div class="price">
+                $49.99
+            </div>
+
+            <button class="cart">
+                ADD TO CART
+            </button>
+
+        </div>
+
+    </div>
+
+
+    <div class="product">
+
+        <div class="product-image">
+
+            <img
+            src="https://images.unsplash.com/photo-1610652492500-ded49ceeb378?auto=format&fit=crop&w=800&q=90"
+            alt="FLERIX men's outfit">
+
+        </div>
+
+        <div class="product-info">
+
+            <h3>
+                Essential Overshirt
+            </h3>
+
+            <p>
+                Men's Collection
+            </p>
+
+            <div class="price">
+                $54.99
+            </div>
+
+            <button class="cart">
+                ADD TO CART
+            </button>
+
+        </div>
+
+    </div>
+
+
+    <div class="product">
+
+        <div class="product-image">
+
+            <img
+            src="https://images.unsplash.com/photo-1519238263530-99bdd11df2ea?auto=format&fit=crop&w=800&q=90"
+            alt="FLERIX kids outfit">
+
+        </div>
+
+        <div class="product-info">
+
+            <h3>
+                Mini Everyday Set
+            </h3>
+
+            <p>
+                Kids Collection
+            </p>
+
+            <div class="price">
+                $34.99
+            </div>
+
+            <button class="cart">
+                ADD TO CART
+            </button>
+
+        </div>
+
+    </div>
+
+
+    <div class="product">
+
+        <div class="product-image">
+
+            <img
+            src="https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?auto=format&fit=crop&w=800&q=90"
+            alt="FLERIX fashion">
+
+        </div>
+
+        <div class="product-info">
+
+            <h3>
+                Aesthetic Co-Ord
+            </h3>
+
+            <p>
+                Women's Collection
+            </p>
+
+            <div class="price">
+                $59.99
+            </div>
+
+            <button class="cart">
+                ADD TO CART
+            </button>
+
+        </div>
+
+    </div>
+
+
+</section>
+
+
+<!-- ================= BRAND BANNER ================= -->
+
+<section class="brand-banner">
+
+    <div>
+
+        <h2>
+            THIS IS<br>
+            FLERIX.
+        </h2>
+
+        <p>
+            Fashion isn't just what you wear.
+            It's how you express who you are.
+            Discover your look and make it yours.
+        </p>
+
+        <a href="#shop" class="btn">
+            SHOP FLERIX
+        </a>
+
+    </div>
+
+</section>
+
+
+<!-- ================= FOOTER ================= -->
+
+<footer>
+
+    <h2>
+        FLERIX
+    </h2>
+
+    <p>
+        Modern fashion • Your style • Your story
+    </p>
+
+    <br>
+
+    <p>
+        © 2026 FLERIX. All Rights Reserved.
+    </p>
+
+</footer>
+
+
+<!-- ================= CART SCRIPT ================= -->
+
+<script>
+
+const buttons =
+document.querySelectorAll(".cart");
+
+buttons.forEach(button => {
+
+    button.addEventListener("click",function(){
+
+        this.innerHTML="✓ ADDED TO CART";
+
+        this.style.background="#444";
+
+        setTimeout(()=>{
+
+            this.innerHTML="ADD TO CART";
+
+            this.style.background="#111";
+
+        },2000);
+
+    });
+
+});
+
+</script>
+
+
+</body>
+</html>

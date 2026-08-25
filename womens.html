@@ -4,7 +4,298 @@
 <head>
     <meta charset="UTF-8">
     <meta name="Bell shirts" content="width=device-width, initial-scale=1.0">
-.
+.<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Innocent Aesthetic Heart Animation</title>
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background:linear-gradient(
+        135deg,
+        #fff8f8,
+        #f8f4ff,
+        #fffdf8
+    );
+    overflow:hidden;
+}
+
+
+/* MAIN ORBIT */
+
+.heart-scene{
+    width:350px;
+    height:350px;
+    position:relative;
+}
+
+
+/* SOFT GLOW */
+
+.heart-scene::before{
+    content:"";
+    position:absolute;
+    width:230px;
+    height:230px;
+
+    top:50%;
+    left:50%;
+
+    transform:translate(-50%,-50%);
+
+    border-radius:50%;
+
+    background:rgba(255,190,210,.18);
+
+    filter:blur(30px);
+}
+
+
+/* CENTER HEART */
+
+.center-heart{
+    position:absolute;
+
+    top:50%;
+    left:50%;
+
+    transform:translate(-50%,-50%);
+
+    font-size:75px;
+
+    animation:
+        softHeart 2s infinite ease-in-out;
+
+    filter:
+        drop-shadow(0 8px 15px rgba(220,120,150,.2));
+
+    z-index:5;
+}
+
+
+/* HEART PULSE */
+
+@keyframes softHeart{
+
+    0%,100%{
+        transform:
+        translate(-50%,-50%)
+        scale(1);
+    }
+
+    50%{
+        transform:
+        translate(-50%,-50%)
+        scale(1.12);
+    }
+
+}
+
+
+/* ORBIT */
+
+.orbit{
+    position:absolute;
+
+    width:100%;
+    height:100%;
+
+    top:0;
+    left:0;
+
+    animation:
+        rotateAround 12s linear infinite;
+}
+
+
+/* SLOW ROTATION */
+
+@keyframes rotateAround{
+
+    from{
+        transform:rotate(0deg);
+    }
+
+    to{
+        transform:rotate(360deg);
+    }
+
+}
+
+
+/* SMALL HEARTS */
+
+.heart{
+    position:absolute;
+
+    font-size:25px;
+
+    animation:
+        floating 2s ease-in-out infinite;
+}
+
+
+/* POSITIONS */
+
+.heart1{
+    top:5px;
+    left:50%;
+}
+
+.heart2{
+    top:22%;
+    right:8px;
+}
+
+.heart3{
+    bottom:18%;
+    right:20px;
+}
+
+.heart4{
+    bottom:2px;
+    left:50%;
+}
+
+.heart5{
+    bottom:18%;
+    left:20px;
+}
+
+.heart6{
+    top:22%;
+    left:8px;
+}
+
+
+/* FLOATING EFFECT */
+
+@keyframes floating{
+
+    0%,100%{
+        transform:scale(1) translateY(0);
+        opacity:.75;
+    }
+
+    50%{
+        transform:scale(1.18) translateY(-8px);
+        opacity:1;
+    }
+
+}
+
+
+/* LITTLE SPARKLES */
+
+.sparkle{
+    position:absolute;
+
+    color:#dca8b8;
+
+    font-size:16px;
+
+    animation:
+        sparkle 2s infinite ease-in-out;
+}
+
+.s1{
+    top:18%;
+    left:25%;
+}
+
+.s2{
+    top:12%;
+    right:25%;
+}
+
+.s3{
+    bottom:25%;
+    left:30%;
+}
+
+.s4{
+    bottom:18%;
+    right:30%;
+}
+
+@keyframes sparkle{
+
+    0%,100%{
+        opacity:.2;
+        transform:scale(.7);
+    }
+
+    50%{
+        opacity:1;
+        transform:scale(1.3);
+    }
+
+}
+
+</style>
+</head>
+
+
+<body>
+
+
+<div class="heart-scene">
+
+    <!-- ROTATING HEARTS -->
+
+    <div class="orbit">
+
+        <span class="heart heart1">♡</span>
+
+        <span class="heart heart2">♡</span>
+
+        <span class="heart heart3">♡</span>
+
+        <span class="heart heart4">♡</span>
+
+        <span class="heart heart5">♡</span>
+
+        <span class="heart heart6">♡</span>
+
+    </div>
+
+
+    <!-- CENTER -->
+
+    <div class="center-heart">
+        ♡
+    </div>
+
+
+    <!-- SPARKLES -->
+
+    <span class="sparkle s1">✦</span>
+
+    <span class="sparkle s2">✧</span>
+
+    <span class="sparkle s3">✦</span>
+
+    <span class="sparkle s4">✧</span>
+
+</div>
+
+
+</body>
+</html>
     <title>Women's Collection | FLERIX</title>
 ```html
 <section class="genz-fashion" id="genz">

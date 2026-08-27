@@ -396,7 +396,493 @@ footer{
     padding:55px 7%;
     text-align:center;
 }
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+  <title>Baby Collection | FLERIX</title>
+
+  <meta name="description"
+        content="Discover the FLERIX Baby Collection — cute, comfortable and stylish outfits for little ones, designed with adorable colors and playful fashion.">
+
+  <style>
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    body {
+      background: #f7efff;
+      color: #321b45;
+    }
+
+    /* ================= HEADER ================= */
+
+    header {
+      min-height: 330px;
+
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+
+      text-align: center;
+
+      background:
+        linear-gradient(
+          rgba(91, 45, 120, 0.65),
+          rgba(45, 20, 65, 0.85)
+        ),
+        url("https://images.unsplash.com/photo-1519689680058-324335c77eba?auto=format&fit=crop&w=1600&q=80");
+
+      background-size: cover;
+      background-position: center;
+    }
+
+    header h1 {
+      font-size: 58px;
+      letter-spacing: 10px;
+      color: white;
+      margin-bottom: 12px;
+    }
+
+    header p {
+      font-size: 18px;
+      color: #f3ddff;
+    }
+
+    /* ================= COLLECTION ================= */
+
+    .collection {
+      text-align: center;
+      padding: 55px 20px 25px;
+    }
+
+    .collection h2 {
+      font-size: 38px;
+      color: #7137a1;
+      margin-bottom: 12px;
+    }
+
+    .collection p {
+      color: #805c91;
+      font-size: 16px;
+    }
+
+    /* ================= PRODUCTS ================= */
+
+    .products {
+      width: 90%;
+      max-width: 1250px;
+
+      margin: 35px auto 70px;
+
+      display: grid;
+
+      grid-template-columns:
+        repeat(auto-fit, minmax(230px, 1fr));
+
+      gap: 28px;
+    }
+
+    /* ================= CARD ================= */
+
+    .card {
+      background: white;
+
+      border: 1px solid #ead5f7;
+
+      border-radius: 22px;
+
+      overflow: hidden;
+
+      transition: 0.35s ease;
+
+      box-shadow:
+        0 8px 25px rgba(113, 55, 161, 0.12);
+    }
+
+    .card:hover {
+      transform: translateY(-10px);
+
+      box-shadow:
+        0 18px 35px rgba(113, 55, 161, 0.22);
+    }
+
+    .card img {
+      width: 100%;
+      height: 330px;
+
+      object-fit: cover;
+
+      display: block;
+
+      transition: 0.4s ease;
+    }
+
+    .card:hover img {
+      transform: scale(1.04);
+    }
+
+    /* ================= INFO ================= */
+
+    .info {
+      padding: 20px;
+      text-align: center;
+    }
+
+    .info h3 {
+      font-size: 20px;
+      color: #542879;
+
+      margin-bottom: 8px;
+    }
+
+    .info p {
+      color: #9773a8;
+
+      font-size: 14px;
+
+      margin-bottom: 10px;
+    }
+
+    .price {
+      font-size: 19px;
+
+      font-weight: bold;
+
+      color: #7137a1;
+
+      margin-bottom: 16px;
+    }
+
+    /* ================= BUTTON ================= */
+
+    .btn {
+      display: inline-block;
+
+      padding: 11px 26px;
+
+      background: #7137a1;
+
+      color: white;
+
+      text-decoration: none;
+
+      border-radius: 25px;
+
+      font-weight: bold;
+
+      transition: 0.3s;
+    }
+
+    .btn:hover {
+      background: #542879;
+
+      transform: scale(1.05);
+    }
+
+    /* ================= FOOTER ================= */
+
+    footer {
+      background: #321b45;
+
+      border-top: 1px solid #5f3977;
+
+      text-align: center;
+
+      padding: 30px;
+
+      color: #d9c1e5;
+    }
+
+    footer strong {
+      color: white;
+    }
+
+    /* ================= MOBILE ================= */
+
+    @media (max-width: 600px) {
+
+      header {
+        min-height: 260px;
+      }
+
+      header h1 {
+        font-size: 40px;
+
+        letter-spacing: 6px;
+      }
+
+      header p {
+        font-size: 14px;
+      }
+
+      .collection h2 {
+        font-size: 30px;
+      }
+
+    }
+
+  </style>
+</head>
+
+
+<body>
+
+
+  <!-- ================= HEADER ================= -->
+
+  <header>
+
+    <h1>FLERIX</h1>
+
+    <p>
+      BABY COLLECTION — LITTLE STYLE, BIG SMILES 💜
+    </p>
+
+  </header>
+
+
+
+  <!-- ================= COLLECTION TITLE ================= -->
+
+  <section class="collection">
+
+    <h2>
+      Baby Collection
+    </h2>
+
+    <p>
+      Cute outfits made for your little stars ✨
+    </p>
+
+  </section>
+
+
+
+  <!-- ================= PRODUCTS ================= -->
+
+  <section class="products">
+
+
+    <!-- BABY PRODUCT 1 -->
+
+    <div class="card">
+
+      <img
+        src="https://images.unsplash.com/photo-1519238263530-99bdd11df2ea?auto=format&fit=crop&w=700&q=80"
+        alt="Cute baby outfit">
+
+      <div class="info">
+
+        <h3>
+          Little Dreamer
+        </h3>
+
+        <p>
+          Soft Cotton Outfit
+        </p>
+
+        <div class="price">
+          Rs. 2,499
+        </div>
+
+        <a href="#" class="btn">
+          Shop Now
+        </a>
+
+      </div>
+
+    </div>
+
+
+
+    <!-- BABY PRODUCT 2 -->
+
+    <div class="card">
+
+      <img
+        src="https://images.unsplash.com/photo-1503919545889-aef636e10ad4?auto=format&fit=crop&w=700&q=80"
+        alt="Baby fashion clothing">
+
+      <div class="info">
+
+        <h3>
+          Purple Cutie
+        </h3>
+
+        <p>
+          Adorable Baby Dress
+        </p>
+
+        <div class="price">
+          Rs. 2,799
+        </div>
+
+        <a href="#" class="btn">
+          Shop Now
+        </a>
+
+      </div>
+
+    </div>
+
+
+
+    <!-- BABY PRODUCT 3 -->
+
+    <div class="card">
+
+      <img
+        src="https://images.unsplash.com/photo-1542816417-098367d8a5d9?auto=format&fit=crop&w=700&q=80"
+        alt="Baby girl fashion">
+
+      <div class="info">
+
+        <h3>
+          Mini Princess
+        </h3>
+
+        <p>
+          Elegant Party Dress
+        </p>
+
+        <div class="price">
+          Rs. 3,499
+        </div>
+
+        <a href="#" class="btn">
+          Shop Now
+        </a>
+
+      </div>
+
+    </div>
+
+
+
+    <!-- BABY PRODUCT 4 -->
+
+    <div class="card">
+
+      <img
+        src="https://images.unsplash.com/photo-1596870230751-ebdfce98ec42?auto=format&fit=crop&w=700&q=80"
+        alt="Baby casual outfit">
+
+      <div class="info">
+
+        <h3>
+          Tiny Trendsetter
+        </h3>
+
+        <p>
+          Everyday Casual Wear
+        </p>
+
+        <div class="price">
+          Rs. 2,299
+        </div>
+
+        <a href="#" class="btn">
+          Shop Now
+        </a>
+
+      </div>
+
+    </div>
+
+
+
+    <!-- BABY PRODUCT 5 -->
+
+    <div class="card">
+
+      <img
+        src="https://images.unsplash.com/photo-1519340241574-2cec6aef0c01?auto=format&fit=crop&w=700&q=80"
+        alt="Baby stylish clothes">
+
+      <div class="info">
+
+        <h3>
+          Sweet Lavender
+        </h3>
+
+        <p>
+          Soft Premium Outfit
+        </p>
+
+        <div class="price">
+          Rs. 2,999
+        </div>
+
+        <a href="#" class="btn">
+          Shop Now
+        </a>
+
+      </div>
+
+    </div>
+
+
+
+    <!-- BABY PRODUCT 6 -->
+
+    <div class="card">
+
+      <img
+        src="https://images.unsplash.com/photo-1596464716127-f2a82984de30?auto=format&fit=crop&w=700&q=80"
+        alt="Cute little baby fashion">
+
+      <div class="info">
+
+        <h3>
+          Little Sunshine
+        </h3>
+
+        <p>
+          Comfy Playwear
+        </p>
+
+        <div class="price">
+          Rs. 1,999
+        </div>
+
+        <a href="#" class="btn">
+          Shop Now
+        </a>
+
+      </div>
+
+    </div>
+
+
+  </section>
+
+
+
+  <!-- ================= FOOTER ================= -->
+
+  <footer>
+
+    <p>
+      © 2026 <strong>FLERIX</strong> — Baby Collection
+    </p>
+
+    <p>
+      Little Looks. Big Love. 💜
+    </p>
+
+  </footer>
+
+
+</body>
+</html>
 footer h2{
     letter-spacing:6px;
     margin-bottom:15px;
